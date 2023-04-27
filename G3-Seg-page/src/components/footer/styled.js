@@ -9,9 +9,7 @@ export const FooterStyled = styled.div`
         display: flex;
         justify-content: space-around;
         align-items: center;
-        font-size: 12px;
-        font-weight:500;
-        line-height: 21px;
+        
     };
 
     .logo-footer {
@@ -21,11 +19,22 @@ export const FooterStyled = styled.div`
         margin-bottom: 1.87rem;
     }
 
-   
 
    .footer-contact {
     display: flex;
-    text-decoration: none
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight:500;
+    line-height: 21px;
+    
    }
+
+.frase-1 {
+    font-size: 12px;
+    font-weight:500;
+    line-height: 21px;
+}
+
 `;
 

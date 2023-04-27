@@ -11,12 +11,17 @@ function FooterArea() {
           </li>
 
           <li>
-            <h6 className="frase-1">2023 - todos os direitos reservados</h6>
+            <h6 className="frase-1">2023 - Todos os direitos reservados</h6>
           </li>
 
-          <li className="footer-contact">
-            <a href="#">contato@g3seguranca.com.br</a>
-            <a>(34) 9 9223-4389</a>
+          <li>
+            <a href="#" className="footer-contact">
+              contato@g3seguranca.com.br
+            
+            <br />
+
+              (34) 9 9223-4389
+            </a>
           </li>
         </ul>
       </footer>
