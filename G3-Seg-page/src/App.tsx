@@ -1,9 +1,14 @@
+import GlobalStyle from './styles/global.js';
+import Navbar from './components/header/navbar';
+import FooterArea from './components/footer';
 
 function App() {
 
   return (
     <>
-      <h1>G3 Segurança</h1>
+      <Navbar />
+      <FooterArea />
+      <GlobalStyle />
     </>
   )
 }
