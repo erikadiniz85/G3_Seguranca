@@ -1,12 +1,13 @@
 import GlobalStyle from './styles/global.js';
-import Navbar from './components/header/navbar';
 import FooterArea from './components/footer';
+
+import HeaderArea from './components/header/index.js';
 
 function App() {
 
   return (
     <>
-      <Navbar />
+      <HeaderArea />
       <FooterArea />
       <GlobalStyle />
     </>
