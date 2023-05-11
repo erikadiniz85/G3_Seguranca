@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import backgroundHeader from "../../assets/img/background-inicio.png"
+import backgroundHeader from "../../assets/img/background-inicio.svg"
 
 export const HeaderStyled = styled.div`
     .header {

@@ -4,19 +4,20 @@ export const FooterStyled = styled.div`
     .footer {
         background-color: #2C2C2C;
         width: 100%;
+        height: auto;
         color: #FFFFFF;
         list-style-type: none;
         display: flex;
         justify-content: space-around;
         align-items: center;
         
+        
     };
 
     .logo-footer {
-        width: 6.8rem;
-        height: 2.37rem;
-        margin-top: 1.87rem;
-        margin-bottom: 1.87rem;
+        width: 6.813rem;
+        height: 2.375rem;
+        padding: 1.875rem auto;
     }
 
 
