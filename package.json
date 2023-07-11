@@ -1,0 +1,27 @@
+{
+  "name": "g3_seg",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "vite": "^4.3.5"
+  },
+  "dependencies": {
+    "esbuild": "^0.17.19",
+    "nanoid": "^3.3.6",
+    "picocolors": "^1.0.0",
+    "postcss": "^8.4.23",
+    "react": "^18.2.0",
+    "rollup": "^3.21.7",
+    "source-map-js": "^1.0.2",
+    "styled-components": "^6.0.3"
+  },
+  "description": ""
+}
