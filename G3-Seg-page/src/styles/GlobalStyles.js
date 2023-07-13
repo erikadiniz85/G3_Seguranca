@@ -6,14 +6,15 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     background: #242424;
-    /* width: 100%; */
   }
 
   *{
     font-family: 'Lexend', sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+   
+    
+    
   }
 
   button {

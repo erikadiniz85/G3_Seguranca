@@ -1,24 +1,40 @@
 import styled from "styled-components";
 
 export const CardServicosStyle = styled.div`
-  .card_serviços {
-    margin-left: 30px;
-    margin-bottom: 30px;
+
+  .card_servicos {
+    width: 100%;
     display: flex;
+    gap: 3.5%;
+
+  }
+
+  .servicos_col_1 {
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    
+  }
+
+  .servicos_col_2 {
+    display: flex;
+    width: 50%;
+    flex-direction: column;
   }
 
   .card {
     width: 19.25rem;
     height: 19.063rem;
+    background: #2C2C2C;
     box-shadow: 0px 0px 12px rgba(255, 255, 255, 0.12);
-    margin-top: 5.438rem;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: flex-start;
     align-items: flex-start;
-    margin-bottom: 30px;
-    margin-left: 30px;
+    z-index: -5;
+    margin-bottom: 1.5rem;
+    
   }
 
   .img-card-servicos {
@@ -52,16 +68,15 @@ export const CardServicosStyle = styled.div`
   .title-card-servicos {
     width: 16.25rem;
     color: #ffffff;
+    font-style:normal;
     font-size: 16px;
     font-weight: 600;
     line-height: 24px;
     letter-spacing: 0em;
     text-align: left;
-    position: absolute;
-    z-index: 1;
     margin-top: 12.688rem;
     display: flex;
-    justify-content: center;
     
+    margin-left: 1.5rem;
   }
 `;

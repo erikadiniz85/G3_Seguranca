@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 
 export const BannerStyled = styled.div`
-@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
   .banner-header {
     width: 100%;
@@ -11,7 +10,7 @@ export const BannerStyled = styled.div`
     flex-direction: row;
     flex-wrap: wrap;
     align-content: center;
-    justify-content: space-evenly;
+    justify-content: center;
   }
 
   .header-text {
