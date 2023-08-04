@@ -1,23 +1,26 @@
 import PrevencaoCard from "../card-prevencao";
+import { PrevencaoStyle } from "./styled.js";
 
 function Prevencao() {
   return (
     <>
-      <div className="prevencao-card-geral">
-        <div>
-          <h3>Prevenção: Ferramentas utilizadas</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore.
-          </p>
-        </div>
+      <PrevencaoStyle>
+        <div className="prevencao-card-geral">
+          <div className="prevencao-card-text">
+            <h3 className="prevencao-card-h3">
+              Prevenção: Ferramentas utilizadas
+            </h3>
+            <p className="prevencao-card-p">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore.
+            </p>
+          </div>
 
-        <div>
-          <PrevencaoCard />
+          <div className="prevencao-card-wrapper">
+            <PrevencaoCard />
+          </div>
         </div>
-
-        <div></div>
-      </div>
+      </PrevencaoStyle>
     </>
   );
 }
