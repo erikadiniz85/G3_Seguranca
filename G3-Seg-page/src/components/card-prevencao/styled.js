@@ -9,7 +9,7 @@ export const CardPrevencaoStyle = styled.div`
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 3rem;
-    /* margin-bottom: 6.44rem; */
+    
     
   }
 

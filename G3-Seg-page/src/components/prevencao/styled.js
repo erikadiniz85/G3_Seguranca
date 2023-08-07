@@ -4,14 +4,10 @@ import backgroundPrevencao from "../../assets/img/i-stock-12633162971.svg";
 export const PrevencaoStyle = styled.div`
   .prevencao-card-geral {
     /* background-image: url(${backgroundPrevencao}); */
-    background-color: green;
+    background: #242424;
     width: 100%;
     height: auto;
-    /* display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        align-content: space-around; */
-    
+    padding-bottom: 6.44rem;
   }
 
   .prevencao-card-text {
