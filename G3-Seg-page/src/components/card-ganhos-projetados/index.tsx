@@ -94,9 +94,7 @@ function GanhosProjetadosCard() {
                     </li>
                   </ul>
                 </div>
-                <div className="btn_ganhos_proj">
-
-                </div>
+                <div className="btn_ganhos_proj"></div>
                 <BtnProjeto />
               </div>
             </div>

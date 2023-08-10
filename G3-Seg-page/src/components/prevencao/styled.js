@@ -1,13 +1,19 @@
 import styled from "styled-components";
-import backgroundPrevencao from "../../assets/img/i-stock-12633162971.svg";
-
+import img_card_prevencao from "../../assets/img/img-card-prev.svg";
 export const PrevencaoStyle = styled.div`
+
+
   .prevencao-card-geral {
-    /* background-image: url(${backgroundPrevencao}); */
     background: #242424;
+    
+    background-image: url(${img_card_prevencao});
+    background-size: 62rem;
+    background-repeat: no-repeat;
+    background-position: right center;
     width: 100%;
     height: auto;
     padding-bottom: 6.44rem;
+    background-blend-mode: lighten;
   }
 
   .prevencao-card-text {

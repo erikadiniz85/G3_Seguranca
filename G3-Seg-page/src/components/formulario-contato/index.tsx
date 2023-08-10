@@ -1,19 +1,20 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
+import { FormularioStyles } from "./styled.js";
 
 const Formulario = () => {
   const [formulario, setFormulario] = useState({
-    nome: '',
-    telefone: '',
-    email: '',
-    assunto: '',
-    mensagem: '',
+    nome: "",
+    telefone: "",
+    email: "",
+    assunto: "",
+    mensagem: "",
   });
 
   const handleChange = (event) => {
     const { name, value } = event.target;
     setFormulario((prevState) => ({
       ...prevState,
-      [name]: value
+      [name]: value,
     }));
   };
 
@@ -23,59 +24,66 @@ const Formulario = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label>
-        Seu nome
-        <input
-          type="text"
-          name="nome"
-          value={formulario.nome}
-          onChange={handleChange}
-        />
-      </label>
+    <>
+      <FormularioStyles>
+        <form className="form_area" onSubmit={handleSubmit}>
+          <div className="form">
+            <input
+              type="text"
+              name="nome"
+              value={formulario.nome}
+              onChange={handleChange}
+            />
+            <label className="label_form_contato">Seu nome</label>
+          </div>
 
-      <label>
-        Telefone
-        <input
-          type="number"
-          name="telefone"
-          value={formulario.telefone}
-          onChange={handleChange}
-        />
-      </label>
+          <div className="form">
+            <input
+              type="number"
+              name="telefone"
+              value={formulario.telefone}
+              onChange={handleChange}
+            />
+            <label className="label_form_contato">Telefone</label>
+          </div>
 
-      <label>
-        Email:
-        <input
-          type="email"
-          name="email"
-          value={formulario.email}
-          onChange={handleChange}
-        />
-      </label>
+          <div className="form">
+            <input
+              type="email"
+              name="email"
+              value={formulario.email}
+              onChange={handleChange}
+            />
+            <label className="label_form_contato">Email</label>
+          </div>
 
-      <label>
-        Assunto
-        <input
-          type="text"
-          name="assunto"
-          value={formulario.assunto}
-          onChange={handleChange}
-        />
-      </label>
+          <div className="form">
+            <input
+              type="text"
+              name="assunto"
+              value={formulario.assunto}
+              onChange={handleChange}
+            />
+            <label className="label_form_contato">Assunto</label>
+          </div>
 
-      <label>
-        Mensagem
-        <input
-          type="text"
-          name="mensagem"
-          value={formulario.mensagem}
-          onChange={handleChange}
-        />
-      </label>
+          <div className="text_msg_form">
+            <textarea
+            required
+            maxLength={100}
+              name="mensagem"
+              value={formulario.mensagem}
+              onChange={handleChange}
+            />
+            <label className="label_form_contato">Mensagem</label>
+          </div>
 
-      <button type="submit">Enviar mensagem</button>
-    </form>
+          <button className="btn_enviar" type="submit">
+            ENVIAR MENSAGEM
+          </button>
+        </form>
+      </FormularioStyles>
+    </>
   );
 };
 

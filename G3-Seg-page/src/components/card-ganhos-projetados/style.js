@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import approve_icon from "../../assets/img/icones/aprove.svg";
 
 export const CardGanhosProjetadosStyles = styled.div`
   .div_geral {

@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const NavbarStyle = styled.div`
     .navbar {
-        width: auto;
+        width: 100%;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
@@ -10,4 +10,6 @@ export const NavbarStyle = styled.div`
         align-items: center;
         padding-top: 1rem;
     }
+
+    
 `

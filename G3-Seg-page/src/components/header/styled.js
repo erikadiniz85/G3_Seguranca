@@ -6,7 +6,13 @@ export const HeaderStyled = styled.div`
         background-image: url(${backgroundHeader});
         width: 100%;
         height: auto;
-        
+        background-size: contain;
         
     }
+
+    @media only screen and (max-width: 320px) {
+  .header {
+    background-color: salmon; /*voltar tom original */
+  }
+}
 `
