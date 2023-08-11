@@ -1,26 +1,75 @@
 import { FormularioStyles } from "./styled.js";
-import { useForm } from "react-hook-form";
-import { isEmail } from "validator";
+import { useForm, SubmitHandler } from "react-hook-form";
+import {isEmail} from "validator";
+import emailjs from "@emailjs/browser";
+import { useState } from "react";
+
+type Inputs = {
+  name: string,
+  telefone: number,
+  email: string,
+  assunto: string,
+   mensagem: string,
+};
 
 const Formulario = () => {
+  const [name, setName] = useState('');
+  const [telefone, setTelefone] = useState('');
+  const [email, setEmail] = useState('');
+  const [assunto, setAssunto] = useState('');
+  const [mensagem, setMensagem] = useState('');
+
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm();
+  } = useForm<Inputs>();
 
-  const onSubmit = (data) => {
-    console.log(data)
-    alert(JSON.stringify(data));
-  };
+  const onSubmit: SubmitHandler<Inputs> = data => console.log(data);    
+  
+
+
+  function sendEmail(e){
+   
+
+    const templateParams = {
+      from_name: name,
+      telefone: telefone,
+      email: email,
+      assunto: assunto,
+      mensagem: mensagem,
+    };
+  
+    emailjs
+      .send(
+        "service_gjpdrm7",
+        "template_kujno7j",
+        templateParams,
+        "5FthOE8erNPa9B57u"
+      )
+      .then(
+        function (response) {
+          console.log("SUCCESS!", response.status, response.text);
+          setName("");
+          setTelefone("");
+          setEmail("");
+          setAssunto("");
+          setMensagem("");
+        },
+        function (error) {
+          console.log("FAILED...", error);
+        }
+      );
+  }
+
+
 
   console.log("RENDER");
 
   return (
     <>
       <FormularioStyles>
-        <form className="form_area">
-
+        <form className="form_area" onSubmit={handleSubmit(onSubmit)}>
           <div className="form">
             <input
               className={errors?.name && "input-error"}
@@ -32,7 +81,6 @@ const Formulario = () => {
             )}
             <label className="label_form_contato">Seu nome</label>
           </div>
-
 
           <div className="form">
             <input
@@ -49,7 +97,6 @@ const Formulario = () => {
             )}
             <label className="label_form_contato">Telefone</label>
           </div>
-
 
           <div className="form">
             <input
@@ -69,7 +116,6 @@ const Formulario = () => {
             )}
             <label className="label_form_contato">E-mail</label>
           </div>
-
 
           <div className="form">
             <input
@@ -101,7 +147,7 @@ const Formulario = () => {
 
           <button
             className="btn_enviar"
-            onClick={() => handleSubmit(onSubmit)()}
+            onClick={() => handleSubmit(sendEmail)()}
           >
             ENVIAR MENSAGEM
           </button>
