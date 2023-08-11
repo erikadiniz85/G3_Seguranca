@@ -1,84 +1,108 @@
-import React, { useState } from "react";
 import { FormularioStyles } from "./styled.js";
+import { useForm } from "react-hook-form";
+import { isEmail } from "validator";
 
 const Formulario = () => {
-  const [formulario, setFormulario] = useState({
-    nome: "",
-    telefone: "",
-    email: "",
-    assunto: "",
-    mensagem: "",
-  });
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
 
-  const handleChange = (event) => {
-    const { name, value } = event.target;
-    setFormulario((prevState) => ({
-      ...prevState,
-      [name]: value,
-    }));
+  const onSubmit = (data) => {
+    console.log(data)
+    alert(JSON.stringify(data));
   };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    // Lógica para lidar com o envio do formulário
-  };
+  console.log("RENDER");
 
   return (
     <>
       <FormularioStyles>
-        <form className="form_area" onSubmit={handleSubmit}>
+        <form className="form_area">
+
           <div className="form">
             <input
+              className={errors?.name && "input-error"}
               type="text"
-              name="nome"
-              value={formulario.nome}
-              onChange={handleChange}
+              {...register("name", { required: true })}
             />
+            {errors?.name?.type === "required" && (
+              <p className="error-message">Campo obrigatório!</p>
+            )}
             <label className="label_form_contato">Seu nome</label>
           </div>
 
+
           <div className="form">
             <input
-              type="number"
-              name="telefone"
-              value={formulario.telefone}
-              onChange={handleChange}
+              className={errors?.telefone && "input-error"}
+              type="telefone"
+              {...register("telefone", {
+                required: true,
+                minLength: 6,
+                maxLength: 12,
+              })}
             />
+            {errors?.telefone?.type === "required" && (
+              <p className="error-message">Campo obrigatório!</p>
+            )}
             <label className="label_form_contato">Telefone</label>
           </div>
 
-          <div className="form">
-            <input
-              type="email"
-              name="email"
-              value={formulario.email}
-              onChange={handleChange}
-            />
-            <label className="label_form_contato">Email</label>
-          </div>
 
           <div className="form">
             <input
-              type="text"
-              name="assunto"
-              value={formulario.assunto}
-              onChange={handleChange}
+              className={errors?.email && "input-error"}
+              type="email"
+              {...register("email", {
+                required: true,
+                validate: (value) => isEmail(value),
+              })}
             />
+            {errors?.email?.type === "required" && (
+              <p className="error-message">Campo obrigatório!</p>
+            )}
+
+            {errors?.email?.type === "validate" && (
+              <p className="error-message">Email inválido.</p>
+            )}
+            <label className="label_form_contato">E-mail</label>
+          </div>
+
+
+          <div className="form">
+            <input
+              className={errors?.assunto && "input-error"}
+              type="text"
+              {...register("assunto", { required: true })}
+            />
+            {errors?.assunto?.type === "required" && (
+              <p className="error-message">Campo obrigatório!</p>
+            )}
             <label className="label_form_contato">Assunto</label>
           </div>
 
           <div className="text_msg_form">
-            <textarea
-            required
-            maxLength={100}
-              name="mensagem"
-              value={formulario.mensagem}
-              onChange={handleChange}
+            <input
+              className={errors?.mensagem && "input-error"}
+              {...register("mensagem", {
+                required: true,
+                max: 500,
+                min: 3,
+                maxLength: 500,
+              })}
             />
+            {errors?.mensagem?.type === "required" && (
+              <p className="error-message">Campo obrigatório!</p>
+            )}
             <label className="label_form_contato">Mensagem</label>
           </div>
 
-          <button className="btn_enviar" type="submit">
+          <button
+            className="btn_enviar"
+            onClick={() => handleSubmit(onSubmit)()}
+          >
             ENVIAR MENSAGEM
           </button>
         </form>

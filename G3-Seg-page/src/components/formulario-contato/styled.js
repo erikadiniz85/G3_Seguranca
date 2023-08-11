@@ -3,8 +3,6 @@ import styled from "styled-components";
 export const FormularioStyles = styled.div`
   .form_area {
     color: #262626;
-    
-
   }
 
   .form {
@@ -17,7 +15,6 @@ export const FormularioStyles = styled.div`
     width: 29.6rem;
     height: 2.8rem;
     padding-left: 1rem;
-    outline: 0;
     border: 0.5px solid #ddd;
     border-radius: 10px;
     box-shadow: 0px 0px 6px 0px #fd7a1e;
@@ -52,32 +49,30 @@ export const FormularioStyles = styled.div`
   .text_msg_form {
     display: flex;
     flex-direction: column;
-    min-width: 350px;
-    position: relative;
   }
 
   .text_msg_form input {
-    width: 100%;
-    height: 56px;
-    padding: 14px 16px 0 10px;
-    outline: 0;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+    width: 29.6rem;
+    height: 9rem;
+    padding-left: 1rem;
+    box-shadow: 0px 0px 6px 0px #FD7A1E;
+    border-radius: 10px;
     background: #fff;
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
   }
 
   .text_msg_form label {
-    font-size: 16px;
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 0 12px;
-    color: #999;
+    font-size: 14px;
+    color: #262626;
+    margin-left: 1rem;
     pointer-events: none;
     position: absolute;
-    transform: translate(0, 26px) scale(1);
+    transform: translate(0, 12px) scale(1);
     transform-origin: top left;
     transition: all 0.2s ease-out;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.3125rem;
   }
 
   .text_msg_form:focus-within label {
@@ -93,5 +88,9 @@ export const FormularioStyles = styled.div`
     font-weight: 700;
     line-height: 1.875rem; /* 187.5% */
     margin-top: 0.75rem;
+  }
+
+  .error-message {
+    color: red;
   }
 `;
