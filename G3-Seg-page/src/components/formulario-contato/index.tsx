@@ -9,7 +9,7 @@ type Inputs = {
   telefone: number,
   email: string,
   assunto: string,
-   mensagem: string,
+  mensagem: string,
 };
 
 const Formulario = () => {
@@ -28,33 +28,31 @@ const Formulario = () => {
   const onSubmit: SubmitHandler<Inputs> = data => console.log(data);    
   
 
+  const templateParams = {
+    from_name: name,
+    telefone: telefone,
+    email: email,
+    assunto: assunto,
+    mensagem: mensagem,
+  };
 
   function sendEmail(e){
-   
-
-    const templateParams = {
-      from_name: name,
-      telefone: telefone,
-      email: email,
-      assunto: assunto,
-      mensagem: mensagem,
-    };
-  
+    
     emailjs
-      .send(
+      .sendForm(
         "service_gjpdrm7",
         "template_kujno7j",
-        templateParams,
+        e.target,
         "5FthOE8erNPa9B57u"
       )
       .then(
         function (response) {
           console.log("SUCCESS!", response.status, response.text);
-          setName("");
-          setTelefone("");
-          setEmail("");
-          setAssunto("");
-          setMensagem("");
+          setName('');
+          setTelefone('');
+          setEmail('');
+          setAssunto('');
+          setMensagem('');
         },
         function (error) {
           console.log("FAILED...", error);
@@ -69,7 +67,7 @@ const Formulario = () => {
   return (
     <>
       <FormularioStyles>
-        <form className="form_area" onSubmit={handleSubmit(onSubmit)}>
+        <form className="form_area" onSubmit={sendEmail}>
           <div className="form">
             <input
               className={errors?.name && "input-error"}
@@ -147,6 +145,7 @@ const Formulario = () => {
 
           <button
             className="btn_enviar"
+            type="submit"
             onClick={() => handleSubmit(sendEmail)()}
           >
             ENVIAR MENSAGEM
