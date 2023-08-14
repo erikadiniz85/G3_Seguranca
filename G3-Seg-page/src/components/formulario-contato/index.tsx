@@ -37,7 +37,8 @@ const Formulario = () => {
   };
 
   function sendEmail(e){
-    
+    e.preventDefault();
+
     emailjs
       .sendForm(
         "service_gjpdrm7",
