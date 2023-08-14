@@ -1,8 +1,8 @@
 import { FormularioStyles } from "./styled.js";
-import { useForm, SubmitHandler } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import {isEmail} from "validator";
 import emailjs from "@emailjs/browser";
-import { useState } from "react";
+
 
 type Inputs = {
   name: string,
@@ -13,11 +13,6 @@ type Inputs = {
 };
 
 const Formulario = () => {
-  const [name, setName] = useState('');
-  const [telefone, setTelefone] = useState('');
-  const [email, setEmail] = useState('');
-  const [assunto, setAssunto] = useState('');
-  const [mensagem, setMensagem] = useState('');
 
   const {
     register,
@@ -25,16 +20,7 @@ const Formulario = () => {
     formState: { errors },
   } = useForm<Inputs>();
 
-  const onSubmit: SubmitHandler<Inputs> = data => console.log(data);    
   
-
-  const templateParams = {
-    from_name: name,
-    telefone: telefone,
-    email: email,
-    assunto: assunto,
-    mensagem: mensagem,
-  };
 
   function sendEmail(e){
     e.preventDefault();
@@ -49,11 +35,6 @@ const Formulario = () => {
       .then(
         function (response) {
           console.log("SUCCESS!", response.status, response.text);
-          setName('');
-          setTelefone('');
-          setEmail('');
-          setAssunto('');
-          setMensagem('');
         },
         function (error) {
           console.log("FAILED...", error);
