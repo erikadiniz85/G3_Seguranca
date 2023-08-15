@@ -3,6 +3,9 @@ import styled from "styled-components";
 export const FormularioStyles = styled.div`
   .form_area {
     color: #262626;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
   }
 
   .form {
@@ -88,6 +91,7 @@ export const FormularioStyles = styled.div`
     font-weight: 700;
     line-height: 1.875rem; /* 187.5% */
     margin-top: 0.75rem;
+    
   }
 
   .error-message {

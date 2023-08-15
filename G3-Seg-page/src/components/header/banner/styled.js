@@ -1,8 +1,6 @@
 import styled from "styled-components";
 
-
 export const BannerStyled = styled.div`
-
   .banner-header {
     width: 100%;
     height: auto;
@@ -15,13 +13,12 @@ export const BannerStyled = styled.div`
 
   .header-text {
     width: 32.125rem;
-    color: #FFFFFF;
+    color: #ffffff;
     margin-top: 7.625rem;
     margin-bottom: 7rem;
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
-    
   }
 
   .header-subtitle {
@@ -58,6 +55,14 @@ export const BannerStyled = styled.div`
     letter-spacing: 0em;
   }
 
+  .btn-go-segmentacao {
+    text-decoration: none;
+    color: #fd7a1e;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.875rem; /* 187.5% */
+  }
 
   .header-image {
     width: 29.625rem;

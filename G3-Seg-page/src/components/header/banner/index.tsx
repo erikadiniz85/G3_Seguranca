@@ -1,6 +1,7 @@
 import ImagemBanner from "../../../assets/img/imagem-banner.svg";
 import BtnProjeto from "../../button-projeto";
 import { BannerStyled } from "./styled.js";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 
 
 function BannerHeader() {
@@ -22,7 +23,7 @@ function BannerHeader() {
               <BtnProjeto />
 
               <button className="btn-conheca">
-                <a>CONHEÇA MAIS</a>
+                <AnchorLink href="#segmentacao" className="btn-go-segmentacao">CONHEÇA MAIS</AnchorLink>
               </button>
             </div>
           </div>

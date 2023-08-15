@@ -7,7 +7,7 @@ export const PrevencaoStyle = styled.div`
     background: #242424;
     
     background-image: url(${img_card_prevencao});
-    background-size: 62rem;
+    background-size: 62rem 35rem;
     background-repeat: no-repeat;
     background-position: right center;
     width: 100%;

@@ -7,7 +7,23 @@ const GlobalStyle = createGlobalStyle`
   body {
     background: #242424;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    
   }
+
+  @media (min-width: 1920px) {
+    body {
+      background-color: salmon;
+      display:flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  
 
   *{
     font-family: 'Lexend', sans-serif;

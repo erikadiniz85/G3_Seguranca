@@ -7,12 +7,14 @@ export const HeaderStyled = styled.div`
         width: 100%;
         height: auto;
         background-size: contain;
+        display: flex;
+        flex-direction: column;
         
     }
 
     @media only screen and (max-width: 320px) {
   .header {
-    background-color: salmon; /*voltar tom original */
+    background: #242424;
   }
 }
 `

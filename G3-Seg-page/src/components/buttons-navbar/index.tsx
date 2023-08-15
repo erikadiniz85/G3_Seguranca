@@ -1,25 +1,26 @@
 import { ButtonsStyle } from "./styled.js";
-import  AnchorLink  from "react-anchor-link-smooth-scroll";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 
 function ButtonsNavbar() {
   return (
     <ButtonsStyle>
       <div className="buttons-navbar">
-        <button>
-          <AnchorLink href="#servicos">SERVIÇOS</AnchorLink>
-        </button>
+        <AnchorLink href="#servicos" className="btn-nav">
+          SERVIÇOS
+        </AnchorLink>
 
-        <button>
-          <AnchorLink href="#historia">SOBRE</AnchorLink>
-        </button>
+        <AnchorLink href="#historia" className="btn-nav">
+          SOBRE
+        </AnchorLink>
 
-        <button>
-          <AnchorLink href="#prevencao">SOLUÇÕES</AnchorLink>
-        </button>
+        <AnchorLink href="#prevencao" className="btn-nav">
+          SOLUÇÕES
+        </AnchorLink>
 
-        <button  className="btn-contato">
-          <AnchorLink href="#formulario">FALE COM ESPECIALISTA</AnchorLink>
-        </button>
+        {/* <button  className="btn-contato"> */}
+        <AnchorLink href="#formulario" className="btn-contato-nav">
+          FALE COM ESPECIALISTA
+        </AnchorLink>
       </div>
     </ButtonsStyle>
   );

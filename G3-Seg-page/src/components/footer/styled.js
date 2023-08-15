@@ -10,14 +10,15 @@ export const FooterStyled = styled.div`
         display: flex;
         justify-content: space-around;
         align-items: center;
-        
-        
+        padding-top: 1.88rem;
+        padding-bottom: 1.87rem;
+        margin-top: 6rem;
     };
 
     .logo-footer {
         width: 6.813rem;
         height: 2.375rem;
-        padding: 1.875rem auto;
+        
     }
 
 
