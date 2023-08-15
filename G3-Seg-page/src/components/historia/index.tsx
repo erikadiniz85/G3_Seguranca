@@ -6,7 +6,7 @@ function HistoriaG3() {
   return (
     <>
       <HistoriaG3Styled>
-        <div className="historia">
+        <div className="historia" id="historia">
           <div className="historia-wrapper">
             <h3 className="history-title">NOSSA TRAJETÓRIA</h3>
 

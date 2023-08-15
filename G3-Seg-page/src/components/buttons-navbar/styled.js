@@ -7,6 +7,7 @@ export const ButtonsStyle = styled.div`
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    
   }
 
   button {
@@ -16,6 +17,7 @@ export const ButtonsStyle = styled.div`
     font-weight: 700;
     font-size: 16px;
     line-height: 30px;
+    
   }
 
   .btn-contato {
@@ -23,5 +25,7 @@ export const ButtonsStyle = styled.div`
     background-color: #fd7a1e;
     padding: 0.75rem 1rem;
   }
+
+
 `;
 

@@ -7,7 +7,7 @@ function BannerHeader() {
   return (
     <>
       <BannerStyled>
-        <div className="banner-header">
+        <div id="header" className="banner-header">
           <div className="header-text">
             <h2 className="header-subtitle">
             Proteja seu patrimônio, invista em segurança!           

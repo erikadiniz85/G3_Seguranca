@@ -6,7 +6,7 @@ function Servicos() {
   return (
     <>
       <ServicosStyled>
-        <div className="servicos">
+        <div id="servicos" className="servicos">
           <div className="texto-servicos">
             <h2 className="h2-servicos">
               Conheça nossos serviços para garantir a segurança da sua empresa

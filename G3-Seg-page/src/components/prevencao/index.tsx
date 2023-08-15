@@ -5,7 +5,7 @@ function Prevencao() {
   return (
     <>
       <PrevencaoStyle>
-        <div className="prevencao-card-geral">
+        <div className="prevencao-card-geral" id="prevencao">
           <div className="prevencao-card-text">
             <h3 className="prevencao-card-h3">
               Prevenção: Ferramentas utilizadas
