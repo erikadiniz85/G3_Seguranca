@@ -1,13 +1,15 @@
 import { BtnProjetoStyle } from "./styled.js";
+import AnchorLink from "react-anchor-link-smooth-scroll";
+
 
 function BtnProjeto() {
   return (
     <>
       <BtnProjetoStyle>
         <button className="btn-projeto">
-          <a className="btn-projeto-laranja" href="#">
+          <AnchorLink href="#formulario" className="btn-projeto-laranja">
             COMECE SEU PROJETO
-          </a>
+          </AnchorLink>
         </button>
       </BtnProjetoStyle>
     </>

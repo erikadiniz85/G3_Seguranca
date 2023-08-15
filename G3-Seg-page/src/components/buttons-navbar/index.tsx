@@ -5,18 +5,18 @@ function ButtonsNavbar() {
     <ButtonsStyle>
       <div className="buttons-navbar">
         <button>
-          <a>INICIO</a>
+          <a id="inicio">INICIO</a>
         </button>
 
         <button>
-          <a>SOBRE</a>
+          <a id="sobre">SOBRE</a>
         </button>
 
         <button>
-          <a>SOLUÇÕES</a>
+          <a id="solucoes">SOLUÇÕES</a>
         </button>
 
-        <button className="btn-contato">
+        <button id="contato" className="btn-contato">
           <a>FALE COM ESPECIALISTA</a>
         </button>
       </div>

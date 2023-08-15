@@ -2,25 +2,35 @@ import { FormularioStyles } from "./styled.js";
 import { useForm } from "react-hook-form";
 import {isEmail} from "validator";
 import emailjs from "@emailjs/browser";
-
-
-type Inputs = {
-  name: string,
-  telefone: number,
-  email: string,
-  assunto: string,
-  mensagem: string,
-};
+import { useState } from "react";
+import { useEffect } from "react";
 
 const Formulario = () => {
+  
+  const [name, setName] = useState('');
+  const [telefone, setTelefone] = useState('');
+  const [email, setEmail] = useState('');
+  const [assunto, setAssunto] = useState('');
+  const [mensagem, setMensagem] = useState('');
+
+  useEffect(() => {
+    console.log('App Input Renderização');
+  }, []);
 
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<Inputs>();
+  } = useForm();
 
-  
+
+  const templateParams = {
+    from_name: name,
+    telefone: telefone,
+    email: email,
+    assunto: assunto,
+    mensagem: mensagem,
+  };
 
   function sendEmail(e){
     e.preventDefault();
@@ -35,6 +45,11 @@ const Formulario = () => {
       .then(
         function (response) {
           console.log("SUCCESS!", response.status, response.text);
+          setName('');
+          setTelefone('');
+          setEmail('');
+          setAssunto('');
+          setMensagem('');
         },
         function (error) {
           console.log("FAILED...", error);

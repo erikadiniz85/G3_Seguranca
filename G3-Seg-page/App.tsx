@@ -8,12 +8,14 @@ import Segmentacao from './src/components/segmentacao/index.js';
 import Prevencao from './src/components/prevencao/index.js';
 import GanhosProjetadosCard from './src/components/card-ganhos-projetados/index.js';
 import ContatoCard from './src/components/contato/index.js';
+import {Routes} from "react-router-dom";
 
 
 function App() {
 
   return (
     <>
+      <Routes />
       <GlobalStyle />
       <HeaderArea />
       <Servicos/>

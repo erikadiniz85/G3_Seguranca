@@ -19,11 +19,12 @@ function Servicos() {
 
           <div className="coluna-servicos">
             <CardServicos />
+            <BtnProjeto />
           </div>
         </div>
 
         <div className="btn-servicos">
-            <BtnProjeto />
+            
         </div>
         
       </ServicosStyled>
