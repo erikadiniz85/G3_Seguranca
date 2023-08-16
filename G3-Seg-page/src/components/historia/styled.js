@@ -4,25 +4,21 @@ import backgroundHistoria from "../../assets/img/background-historia.svg";
 export const HistoriaG3Styled = styled.div`
   .historia {
     background-image: url(${backgroundHistoria});
-    /* opacity 0.09; */
+    background-repeat: no-repeat;
+    background-size: cover;
     width: 100%;
     height: auto;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-content: space-around;
   }
 
   .historia-wrapper {
-    /* width: 50.375rem; */
     width: 100%;
     height: auto;
     color: #f9b32a;
     display: flex;
-    flex-direction: row;
+    /* flex-direction: row; */
     flex-wrap: wrap;
     justify-content: center;
-    align-items: flex-start;
+    /* align-items: flex-start; */
     padding-top: 6rem;
   }
 

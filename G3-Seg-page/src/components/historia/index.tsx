@@ -1,4 +1,3 @@
-import "./styled.js";
 import retanguloCinza from "../../assets/img/retangulo-cinza.svg";
 import { HistoriaG3Styled } from "./styled";
 

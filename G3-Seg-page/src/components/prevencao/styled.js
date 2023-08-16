@@ -4,16 +4,14 @@ export const PrevencaoStyle = styled.div`
 
 
   .prevencao-card-geral {
-    background: #242424;
-    
-    background-image: url(${img_card_prevencao});
-    background-size: 62rem 35rem;
-    background-repeat: no-repeat;
-    background-position: right center;
     width: 100%;
     height: auto;
-    padding-bottom: 6.44rem;
+    background-image: url(${img_card_prevencao});
+    background-repeat: no-repeat;
+    background-size: cover;
     background-blend-mode: lighten;
+    padding-bottom: 6.44rem;
+    
   }
 
   .prevencao-card-text {

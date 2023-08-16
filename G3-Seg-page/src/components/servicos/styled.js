@@ -1,12 +1,17 @@
 import styled from "styled-components";
+import bg_img_servicos from "../../assets/img/img_bg_servicos.svg";
 
 export const ServicosStyled = styled.div`
   .servicos {
     width: 100%;
+    height: auto;
+    background-image: url(${bg_img_servicos});
+    background-repeat: no-repeat;
+    background-size: 62.1875rem 34.9375rem;
+    background-position: 9.88rem;
+    padding-top: 6rem;
     display: flex;
-    margin-top: 3rem;
-
-
+    
   }
 
   .texto-servicos {

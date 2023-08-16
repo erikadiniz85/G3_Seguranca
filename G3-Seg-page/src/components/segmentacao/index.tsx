@@ -8,7 +8,7 @@ function Segmentacao() {
       <div id="segmentacao" className="container">
         <div className="segmentacao-div">
           <h3 className="segmentacao-title">
-            Segmentação atual para sua segurança
+            Segmentos de atuação para sua segurança
           </h3>
           <p className="segmentacao-p">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
