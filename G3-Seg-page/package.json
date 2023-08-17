@@ -17,6 +17,7 @@
     "react-hook-form": "^7.45.4",
     "react-router-dom": "^6.15.0",
     "styled-components": "^6.0.3",
+    "sweetalert2": "^11.7.23",
     "validator": "^13.11.0"
   },
   "devDependencies": {

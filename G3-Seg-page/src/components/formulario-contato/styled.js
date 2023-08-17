@@ -97,4 +97,9 @@ export const FormularioStyles = styled.div`
   .error-message {
     color: red;
   }
+
+
+  label {
+    
+  }
 `;

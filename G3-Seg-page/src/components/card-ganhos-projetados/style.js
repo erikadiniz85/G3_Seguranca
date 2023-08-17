@@ -7,6 +7,7 @@ export const CardGanhosProjetadosStyles = styled.div`
     flex-direction: column;
     flex-wrap: wrap;
     align-content: center;
+    padding-top: 6rem;
   }
 
   .div_quadro_ganhos {

@@ -5,11 +5,14 @@ export const ServicosStyled = styled.div`
   .servicos {
     width: 100%;
     height: auto;
+    /* background: rgba(36, 36, 36, 0.5); */
     background-image: url(${bg_img_servicos});
+    /* background-image: linear-gradient(left rgba(36,36,36,0));*/
+    background-image: opacity(0.1); 
     background-repeat: no-repeat;
-    background-size: 62.1875rem 34.9375rem;
-    background-position: 9.88rem;
-    padding-top: 6rem;
+    background-size: contain;
+    background-position: center;
+    margin-top: 6rem;
     display: flex;
     
   }
@@ -23,7 +26,7 @@ export const ServicosStyled = styled.div`
     align-content: flex-end;
     color: #f9b32a;
     flex-grow: 3;
-    
+    z-index: 2;
   }
 
   .coluna-servicos {
@@ -35,6 +38,7 @@ export const ServicosStyled = styled.div`
     align-content: flex-start;
     flex-grow: 3;
     margin-left: 3rem;
+    z-index: 2;
   }
 
   .h2-servicos {

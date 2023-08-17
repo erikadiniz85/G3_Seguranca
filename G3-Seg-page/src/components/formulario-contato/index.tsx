@@ -1,20 +1,20 @@
 import { FormularioStyles } from "./styled.js";
 import { useForm } from "react-hook-form";
-import {isEmail} from "validator";
+import { isEmail } from "validator";
 import emailjs from "@emailjs/browser";
 import { useState } from "react";
 import { useEffect } from "react";
+import Swal from "sweetalert2";
 
 const Formulario = () => {
-  
-  const [name, setName] = useState('');
-  const [telefone, setTelefone] = useState('');
-  const [email, setEmail] = useState('');
-  const [assunto, setAssunto] = useState('');
-  const [mensagem, setMensagem] = useState('');
+  const [name, setName] = useState("");
+  const [telefone, setTelefone] = useState("");
+  const [email, setEmail] = useState("");
+  const [assunto, setAssunto] = useState("");
+  const [mensagem, setMensagem] = useState("");
 
   useEffect(() => {
-    console.log('App Input Renderização');
+    // mostrarAlerta();
   }, []);
 
   const {
@@ -22,7 +22,6 @@ const Formulario = () => {
     handleSubmit,
     formState: { errors },
   } = useForm();
-
 
   const templateParams = {
     from_name: name,
@@ -32,7 +31,7 @@ const Formulario = () => {
     mensagem: mensagem,
   };
 
-  function sendEmail(e){
+  function sendEmail(e) {
     e.preventDefault();
 
     emailjs
@@ -42,22 +41,43 @@ const Formulario = () => {
         e.target,
         "5FthOE8erNPa9B57u"
       )
-      .then(
-        function (response) {
-          console.log("SUCCESS!", response.status, response.text);
-          setName('');
-          setTelefone('');
-          setEmail('');
-          setAssunto('');
-          setMensagem('');
-        },
-        function (error) {
-          console.log("FAILED...", error);
-        }
-      );
+
+      .then( (required) => {
+        console.log("SUCCESS!", required.status, required.text);
+        setName("");
+        setTelefone("");
+        setEmail("");
+        setAssunto("");
+        setMensagem("");
+      })
+
+    const required = true;
+    if (required) {
+      Swal.fire({
+        title: "Formulário Enviado!",
+        icon: "success",
+        confirmButtonText: "Fechar",
+      });
+      
+    } else {
+      Swal.fire({
+        title: "Error!",
+        text: "Tente de novo",
+        icon: "error",
+        confirmButtonText: "Ok",
+      });
+    }
+
+    // const required = true;
+
+    // .then((required) => {
+    //   if (required) {
+    //     Swal.fire("Enviado!", "Formulário enviado", "success");
+    //   } else {
+    //     // Swal.fire("Cancelled", "Your imaginary file is safe :)", "error")
+    //   }
+    // });
   }
-
-
 
   console.log("RENDER");
 
@@ -80,7 +100,7 @@ const Formulario = () => {
           <div className="form">
             <input
               className={errors?.telefone && "input-error"}
-              type="telefone"
+              type="number"
               {...register("telefone", {
                 required: true,
                 minLength: 6,

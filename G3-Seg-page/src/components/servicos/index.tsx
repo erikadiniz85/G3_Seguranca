@@ -22,11 +22,6 @@ function Servicos() {
             <BtnProjeto />
           </div>
         </div>
-
-        <div className="btn-servicos">
-            
-        </div>
-        
       </ServicosStyled>
     </>
   );
