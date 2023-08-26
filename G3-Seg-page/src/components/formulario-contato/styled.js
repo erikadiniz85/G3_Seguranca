@@ -1,85 +1,104 @@
 import styled from "styled-components";
 
 export const FormularioStyles = styled.div`
-  .form_area {
-    color: #262626;
+  .container {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    font-size: 16px;
+    width: 29.6rem;
+    height: auto;
   }
 
   .form {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-  }
-
-  .form input {
-    width: 29.6rem;
-    height: 2.8rem;
-    padding-left: 1rem;
-    border: 0.5px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0px 0px 6px 0px #fd7a1e;
-    background: #ffffff;
-    font-size: 14px;
     margin-bottom: 0.75rem;
-  }
-
-  .form label {
-    font-size: 14px;
-    margin-left: 1rem;
-    color: #262626;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 1.3125rem;
-    pointer-events: none;
-    position: absolute;
-    transform: translate(0, 12px) scale(1);
-    transform-origin: top left;
-    transition: all 0.2s ease-in-out;
-  }
-
-  .form:focus-within label {
-    transform: translate(0, 1px) scale(0.75);
-    color: #999;
-  }
-
-  .form .Active {
-  transform: translate(0, 12px) scale(0.75);
-    }
-
-  .text_msg_form {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .text_msg_form input {
+    /* position:relative; */
+    background-color: transparent;
     width: 29.6rem;
-    height: 9rem;
+    height: auto;
+  }
+
+  .input {
+    background-color: #ffffff;
+    /* position: relative; */
+    height: 2.8rem;
+    width: 100%;
+    border: 2px solid #262626;
+    border-radius: 0.5rem;
+    outline: none;
+    margin-bottom: 0.75rem;
+    /* transition: all 160ms ease-in; */
     padding-left: 1rem;
-    box-shadow: 0px 0px 6px 0px #FD7A1E;
-    border-radius: 10px;
+  }
+
+  .input:hover {
+    border-color: #fd7a1e;
+  }
+
+  .label_form_contato {
+    color: #ffffff;
+    /* position: relative; */
+    left: 1rem;
+    /* bottom: 2.8rem; */
+    padding: 0 0.5rem;
+    /* transition: top 200ms ease-in, left 200ms ease-in, font-size 200ms ease-in; */
+    background: transparent;
+    cursor: text;
+  }
+
+  /* .input:focus ~ 
+  .label_form_contato,
+  .input:not(:placeholder-shown)
+  .input:not(:focus)~ 
+  .label_form_contato {
+    font-size: 0.8rem;
+    top: -5.3rem;
+    left: 0.8rem;
+    color: #656565;
+  } */
+
+  .error-message {
+    color: red;
+    font-size: 10px;
+  }
+  .textarea {
     background: #fff;
-    font-size: 16px;
+    /* position: relative; */
+    height: 9rem;
+    width: 100%;
+    border: 2px solid #262626;
+    border-radius: 0.5rem;
+    outline: none;
+    margin-bottom: 0.75rem;
+    /* transition: all 160ms ease-in; */
+    padding-left: 1rem;
+    padding-top: 1rem;
   }
 
-  .text_msg_form label {
-    font-size: 14px;
-    color: #262626;
-    margin-left: 1rem;
-    pointer-events: none;
-    position: absolute;
-    transform: translate(0, 12px) scale(1);
-    transform-origin: top left;
-    transition: all 0.2s ease-out;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 1.3125rem;
+  .textarea:hover {
+    border-color: #fd7a1e;
   }
 
-  .text_msg_form:focus-within label {
-    transform: translate(0, 12px) scale(0.75);
+  /* .textarea:focus ~ 
+  .label_txt,
+  .textarea input:not(:placeholder-shown) 
+  .textarea:not(:focus) ~ 
+  .label_txt {
+    font-size: 0.8rem;
+    top: 18.7rem;
+    left: 0.8rem;
+    color: #656565;
+  } */
+
+  .label_txt {
+    color: #ffffff;
+    /* position: absolute; */
+    left: 1rem;
+    bottom: 9rem;
+    padding: 0 0.5rem;
+    /* transition:  top 200ms ease-in, left 200ms ease-in, font-size 200ms ease-in; */
+    background: transparent;
+    cursor: text;
   }
 
   .btn_enviar {
@@ -89,17 +108,22 @@ export const FormularioStyles = styled.div`
     font-size: 1rem;
     font-style: normal;
     font-weight: 700;
-    line-height: 1.875rem; /* 187.5% */
-    margin-top: 0.75rem;
-    
+    line-height: 1.875rem;
   }
 
-  .error-message {
-    color: red;
+  .input:invalid {
+    background-color: pink;
   }
 
+  .input:valid {
+    background-color: aqua;
+  }
 
-  label {
-    
+  .textarea:invalid {
+    background-color: pink;
+  }
+
+  .textarea:valid {
+    background-color: aqua;
   }
 `;
