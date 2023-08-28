@@ -57,10 +57,7 @@ export const FormularioStyles = styled.div`
     color: #656565;
   } */
 
-  .error-message {
-    color: red;
-    font-size: 10px;
-  }
+  
   .textarea {
     background: #fff;
     /* position: relative; */
@@ -125,5 +122,14 @@ export const FormularioStyles = styled.div`
 
   .textarea:valid {
     background-color: aqua;
+  }
+
+ 
+
+  .error-message {
+    color: red;
+    font-size: 12px;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
   }
 `;

@@ -1,11 +1,16 @@
 import { FormularioStyles } from "./styled.js";
 import { useForm } from "react-hook-form";
-import validator from "validator";
+// import validator from "validator";
 import emailjs from "@emailjs/browser";
 import { useState } from "react";
 import { useEffect } from "react";
 import Swal from "sweetalert2";
 import { ErrorMessage } from "@hookform/error-message";
+import { validate } from "validate.js";
+
+interface FormInputs {
+  multipleErrorInput: string;
+}
 
 function Formulario() {
   useEffect(() => {
@@ -16,14 +21,17 @@ function Formulario() {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm();
+  } = useForm<FormInputs>({
+    criteriaMode: "all",
+  });
+
+  const onSubmit = (data: FormInputs) => console.log(data);
 
   const [name, setName] = useState("");
   const [telefone, setTelefone] = useState("");
   const [email, setEmail] = useState("");
   const [assunto, setAssunto] = useState("");
   const [mensagem, setMensagem] = useState("");
-  
 
   function sendEmail(e) {
     // e.preDefault();
@@ -78,16 +86,13 @@ function Formulario() {
     //       console.log("Erro:", error.status, error.text);
     //     }
     //   );
+  }
 
-    }
-    
   return (
     <>
       <FormularioStyles>
-        <div className="container" onSubmit={sendEmail}>
-          <form className="form">
-
-
+        <div className="container">
+          <form className="form" onSubmit={handleSubmit(onSubmit)}>
             <label className="label_form_contato">Seu nome</label>
             <input
               className="input"
@@ -98,39 +103,59 @@ function Formulario() {
               required
             />
 
-
             <label className="label_form_contato">Telefone com DDD</label>
             <input
               className="input"
               type="tel"
-              onChange={(e) => setTelefone(e.target.value)}
-              value={telefone}
+              // pattern="/[0-9]{3}-[0-9]{5}-[0-9]{4}/"
+              // onChange={(e) => setTelefone(e.target.value)}
+              // value={telefone}
               placeholder=" "
               required
+              // {...register("multipleErrorInput", {
+              //   required: "Preencha o campo",
+              //   pattern: {
+              //     value: /[0-9]{3}-[0-9]{5}-[0-9]{4}/,
+              //     message: "Telefone inválido",
+              //   },
+              // })}
             />
 
-
             <label className="label_form_contato">Email</label>
+
             <input
               className="input"
               type="email"
               // onChange={(e) => setEmail(e.target.value)}
               // value={email}
               placeholder=" "
-              // required
-              {...register("email", {
-                required: "Required",
+              required
+              {...register("multipleErrorInput", {
+                required: "Preencha o campo",
                 pattern: {
                   value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                  message: "invalid email address"
-                }
+                  message: "Email inválido",
+                },
               })}
             />
-            {errors.email && errors.email.message}
-            {/* {errors?.email?.type === "validate" && (
-              <p className="error-message">Email Inválido</p>
-            )} */}
 
+            <ErrorMessage
+              errors={errors}
+              name="multipleErrorInput"
+              render={({ messages }) =>
+                messages &&
+                Object.entries(messages).map(([type, message]) => (
+                  <p className="error-message" key={type}>
+                    {message}
+                  </p>
+                ))
+              }
+            />
+
+            {/* <p>{errors.email && errors.email.message}</p> */}
+            {/* {errors?.email?.type === "validate" && (
+              <p className="error-message">{emailError}</p>
+            )} */}
 
             <label className="label_form_contato">Assunto</label>
             <input
@@ -141,7 +166,6 @@ function Formulario() {
               placeholder=" "
               required
             />
-
 
             <label className="label_txt">Mensagem</label>
             <textarea
@@ -159,6 +183,7 @@ function Formulario() {
             type="submit"
             value="Enviar"
             onClick={() => handleSubmit(sendEmail)()}
+            // onClick={sendEmail}
           >
             ENVIAR MENSAGEM
           </button>
