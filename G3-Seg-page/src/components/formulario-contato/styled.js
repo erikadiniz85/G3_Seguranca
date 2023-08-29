@@ -108,11 +108,11 @@ export const FormularioStyles = styled.div`
     line-height: 1.875rem;
   }
 
-  .input:invalid {
+  input:invalid {
     background-color: pink;
   }
 
-  .input:valid {
+  input:valid {
     background-color: aqua;
   }
 
@@ -124,12 +124,11 @@ export const FormularioStyles = styled.div`
     background-color: aqua;
   }
 
- 
-
   .error-message {
     color: red;
     font-size: 12px;
     margin-bottom: 1rem;
     margin-left: 1rem;
+    display: flex;
   }
 `;
