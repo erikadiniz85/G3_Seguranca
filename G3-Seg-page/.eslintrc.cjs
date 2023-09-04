@@ -12,4 +12,5 @@ module.exports = {
     'react-refresh/only-export-components': 'warn',
   
   },
+  root: true,
 }

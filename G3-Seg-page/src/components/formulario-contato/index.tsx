@@ -1,11 +1,21 @@
 import { FormularioStyles } from "./styled.js";
-import { useForm } from "react-hook-form";
+import { useForm, SubmitHandler } from "react-hook-form";
 import emailjs from "@emailjs/browser";
 import { useState } from "react";
 import { useEffect } from "react";
 import Swal from "sweetalert2";
 // import { ErrorMessage } from "@hookform/error-message";
-import { validate } from "validate.js";
+// import { validate } from "validate.js";
+
+interface IFormInputs {
+  name: string;
+  telefone: number;
+  email: string;
+  assunto: string;
+  mensagem: string;
+}
+
+const onSubmit: SubmitHandler<IFormInputs> = (data) => console.log(data);
 
 function Formulario() {
   useEffect(() => {
@@ -16,7 +26,7 @@ function Formulario() {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm();
+  } = useForm<IFormInputs>();
 
   const [name, setName] = useState("");
   const [telefone, setTelefone] = useState("");
@@ -26,6 +36,7 @@ function Formulario() {
 
   function sendEmail(e) {
     // e.preDefault();
+
     const required = false;
     
     if (
@@ -35,21 +46,29 @@ function Formulario() {
       assunto === "" ||
       mensagem === "" ||
       required
-    ) {
-      Swal.fire({
-        title: "Error!",
-        text: "Tente novamente",
-        icon: "error",
-        confirmButtonText: "Ok",
-      });
-      return;
-    } else {
+      
+    ) { 
       Swal.fire({
         title: "Sucesso!",
         text: "Formulário Enviado",
         icon: "success",
         confirmButtonText: "Ok",
       });
+      
+    } else {
+      setName("");
+      setTelefone("");
+      setEmail("");
+      setAssunto("");
+      setMensagem("");
+
+      Swal.fire({
+        title: "Error!",
+        text: "Preencha os campos e tente novamente",
+        icon: "error",
+        confirmButtonText: "Ok",
+      });
+      return;
     }
 
     // const templateParams = {
@@ -85,19 +104,12 @@ function Formulario() {
     <>
       <FormularioStyles>
         <div className="container">
-          <form className="form" onSubmit={handleSubmit(sendEmail)}>
+          {/* <form className="form" onSubmit={handleSubmit(sendEmail)}> */}
+          <form className="form" onSubmit={handleSubmit(onSubmit)}>
             <div className="form-input">
               <label className="label_form_contato">Seu nome</label>
-              {/* <input
-                className="input"
-                type="text"
-                onChange={(e) => setName(e.target.value)}
-                value={name}
-                placeholder=" "
-                required
-              /> */}
 
-                <input
+              <input
                 className="input"
                 type="text"
                 placeholder=" "
@@ -106,24 +118,19 @@ function Formulario() {
                   required: true,
                   minLength: 3,
                   maxLength: 20,
+                  pattern: /^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$/i,
                 })}
               />
-              {errors?.name?.type === "required" && (
+              {errors.name && (
                 <p className="error-message">Preencha o campo!</p>
               )}
+              {/* {errors?.name?.type === "required" && (
+                <p className="error-message">Preencha o campo!</p>
+              )} */}
             </div>
 
             <div className="form-input">
               <label className="label_form_contato">Telefone com DDD</label>
-              {/* <input
-                className="input"
-                type="tel"
-                pattern="^(?:\()[0-9]{2}(?:\))\s?[0-9]{4,5}(?:-)[0-9]{4}$"
-                onChange={(e) => setTelefone(e.target.value)}
-                value={telefone}
-                placeholder=" "
-                required
-              /> */}
 
               <input
                 className="input"
@@ -132,27 +139,21 @@ function Formulario() {
                 {...register("telefone", {
                   required: true,
                   pattern: {
-                    value: /^(?:\()[0-9]{2}(?:\))\s?[0-9]{4,5}(?:-)[0-9]{4}$/,
+                    value: /^[0-9]{2}\s?[0-9]{4,5}(?:-)[0-9]{4}$/,
                     message: "Telefone inválido",
                   },
                 })}
               />
-              {errors?.telefone?.type === "required" && (
+              {errors.telefone && (
                 <p className="error-message">Preencha o campo!</p>
               )}
+              {/* {errors?.telefone?.type === "required" && (
+                <p className="error-message">Preencha o campo!</p>
+              )} */}
             </div>
 
             <div className="form-input">
               <label className="label_form_contato">Email</label>
-              {/* <input
-                className="input"
-                type="email"
-                onChange={(e) => setEmail(e.target.value)}
-                value={email}
-                placeholder=" "
-                required
-                pattern="/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i"
-              /> */}
 
               <input
                 className="input"
@@ -166,58 +167,61 @@ function Formulario() {
                   },
                 })}
               />
-              {errors?.email?.type === "required" && (
+              {errors.email && (
                 <p className="error-message">Preencha o campo!</p>
               )}
+              {/* {errors?.email?.type === "required" && (
+                <p className="error-message">Preencha o campo!</p>
+              )} */}
             </div>
 
             <div className="form-input">
               <label className="label_form_contato">Assunto</label>
-              {/* <input
-                className="input"
-                type="text"
-                onChange={(e) => setAssunto(e.target.value)}
-                value={assunto}
-                placeholder=" "
-                required
-              /> */}
+
               <input
                 className="input"
                 type="text"
                 required
                 {...register("assunto", {
                   required: true,
+                  minLength: 3,
+                  maxLength: 20,
                   
+                  pattern: {
+                    value: /^[a-zA-Z0-9_ ]+$/i,
+                    message: "Campo necessário"
+                  },
                 })}
               />
-              {errors?.assunto?.type === "required" && (
+              {errors.assunto && (
                 <p className="error-message">Preencha o campo!</p>
               )}
+              {/* {errors?.assunto?.type === "required" && (
+                <p className="error-message">Preencha o campo!</p>
+              )} */}
             </div>
-
 
             <div className="form-input">
               <label className="label_txt">Mensagem</label>
-              {/* <textarea
-                className="textarea"
-                onChange={(e) => setMensagem(e.target.value)}
-                value={mensagem}
-                placeholder=" "
-                required
-              /> */}
-
-                <textarea
+              <textarea
                 className="textarea"
                 required
                 {...register("mensagem", {
                   required: true,
                   minLength: 5,
                   maxLength: 300,
+                  pattern: {
+                    value: /\w/i,
+                    message: "Campo necessário"
+                  },
                 })}
               />
-              {errors?.mensagem?.type === "required" && (
+              {errors.mensagem && (
                 <p className="error-message">Preencha o campo!</p>
               )}
+              {/* {errors?.mensagem?.type === "required" && (
+                <p className="error-message">Preencha o campo!</p>
+              )} */}
             </div>
           </form>
 
