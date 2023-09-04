@@ -9,6 +9,6 @@ export default defineConfig({
       usePolling: true,
     }
   },
-
+  base: "/G3_Seguranca",
   
 })

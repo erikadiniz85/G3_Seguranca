@@ -1,5 +1,6 @@
 {
-  "name": "my-react-ts-app",
+  "homepage": "https://erikadiniz85.github.io/G3_Seguranca/",
+  "name": "g3_seguranca",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -7,7 +8,9 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
@@ -32,6 +35,7 @@
     "eslint": "^8.48.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.1",
+    "gh-pages": "^6.0.0",
     "typescript": "^5.2.2",
     "vite": "^4.4.0"
   }
