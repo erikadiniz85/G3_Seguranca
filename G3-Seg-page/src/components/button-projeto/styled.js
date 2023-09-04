@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const BtnProjetoStyle = styled.div`
+export const BtnProjetoStyled = styled.div`
   .btn-projeto {
     background-color: #fd7a1e;
     border: 2px solid #fd7a1e;
