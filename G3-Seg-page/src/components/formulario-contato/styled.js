@@ -31,9 +31,12 @@ export const FormularioStyles = styled.div`
     padding-left: 1rem;
   }
 
+
   .input:hover {
     border-color: #fd7a1e;
   }
+
+  
 
   .label_form_contato {
     color: #ffffff;
@@ -42,7 +45,7 @@ export const FormularioStyles = styled.div`
     /* bottom: 2.8rem; */
     padding: 0 0.5rem;
     /* transition: top 200ms ease-in, left 200ms ease-in, font-size 200ms ease-in; */
-    background: transparent;
+    /* background: transparent; */
     cursor: text;
   }
 
@@ -108,21 +111,7 @@ export const FormularioStyles = styled.div`
     line-height: 1.875rem;
   }
 
-  input:invalid {
-    background-color: pink;
-  }
-
-  input:valid {
-    background-color: aqua;
-  }
-
-  .textarea:invalid {
-    background-color: pink;
-  }
-
-  .textarea:valid {
-    background-color: aqua;
-  }
+  
 
   .error-message {
     color: red;

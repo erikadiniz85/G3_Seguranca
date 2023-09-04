@@ -4,8 +4,7 @@ import emailjs from "@emailjs/browser";
 import { useState } from "react";
 import { useEffect } from "react";
 import Swal from "sweetalert2";
-// import { ErrorMessage } from "@hookform/error-message";
-// import { validate } from "validate.js";
+
 
 interface IFormInputs {
   name: string;
@@ -135,6 +134,7 @@ function Formulario() {
               <input
                 className="input"
                 type="tel"
+                placeholder=" "
                 required
                 {...register("telefone", {
                   required: true,
@@ -158,6 +158,7 @@ function Formulario() {
               <input
                 className="input"
                 type="email"
+                placeholder=" "
                 required
                 {...register("email", {
                   required: true,
@@ -181,6 +182,7 @@ function Formulario() {
               <input
                 className="input"
                 type="text"
+                placeholder=" "
                 required
                 {...register("assunto", {
                   required: true,
@@ -205,6 +207,7 @@ function Formulario() {
               <label className="label_txt">Mensagem</label>
               <textarea
                 className="textarea"
+                placeholder=" "
                 required
                 {...register("mensagem", {
                   required: true,
