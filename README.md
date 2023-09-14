@@ -1,4 +1,4 @@
-                                                    !!!Projeto em Andamento!!!
+                                     !!!Projeto em Andamento!!!
 
 Projeto One Page para a empresa G3 Segurança, na qual foi utilizado react com typescript;
 
