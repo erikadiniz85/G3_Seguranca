@@ -1,4 +1,4 @@
-import { FormularioStyles } from "./styled.js";
+import { FormularioStyles } from "./styled";
 import { useForm, SubmitHandler } from "react-hook-form";
 import emailjs from "@emailjs/browser";
 import { useState } from "react";

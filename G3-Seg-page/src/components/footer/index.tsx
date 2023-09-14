@@ -1,5 +1,5 @@
 import Logo from "../../assets/img/logo.svg";
-import { FooterStyled } from "./styled.js";
+import { FooterStyled } from "./styled";
 
 function FooterArea() {
   return (

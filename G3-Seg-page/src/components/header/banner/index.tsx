@@ -1,6 +1,6 @@
 import ImagemBanner from "../../../assets/img/imagem-banner.svg";
 import BtnProjeto from "../../button-projeto";
-import { BannerStyled } from "./styled.js";
+import { BannerStyled } from "./styled";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 
 

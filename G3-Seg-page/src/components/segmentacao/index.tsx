@@ -1,4 +1,4 @@
-import { SegmentacaoStyles } from "./styled.js";
+import { SegmentacaoStyles } from "./styled";
 import CardSegmentacao from "../../components/card-segmentacao/index.tsx";
 import BtnProjeto from "../../components/button-projeto/index.tsx";
 

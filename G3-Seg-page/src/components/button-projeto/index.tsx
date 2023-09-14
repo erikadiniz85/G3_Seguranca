@@ -1,4 +1,4 @@
-import  {BtnProjetoStyled} from "../button-projeto/styled.js";
+import  {BtnProjetoStyled} from "./styled";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 
 

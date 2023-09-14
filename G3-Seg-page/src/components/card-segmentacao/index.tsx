@@ -1,4 +1,4 @@
-import { CardSegmentacaoStyles } from "./styled.js";
+import { CardSegmentacaoStyles } from "./styled";
 import  icon1Segmentacao  from "../../assets/img/icones/shopping-shop.svg";
 import  icon2Segmentacao  from "../../assets/img/icones/users-approve-user.svg";
 import  icon3Segmentacao  from "../../assets/img/icones/user-interface-increase-brightness.svg";

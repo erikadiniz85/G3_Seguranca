@@ -1,6 +1,6 @@
 import BtnProjeto from "../button-projeto";
-import CardServicos from "../card-servicos/index.js";
-import { ServicosStyled } from "./styled.js";
+import CardServicos from "../card-servicos/index";
+import { ServicosStyled } from "./styled";
 
 function Servicos() {
   return (

@@ -1,4 +1,4 @@
-import { CardServicosStyle } from "./styled.js";
+import { CardServicosStyle } from "./styled";
 
 import img_levantamento_dados from "../../assets/img/img-levantamentodedados.svg";
 import icon_levantamento_dados from "../../assets/img/icones/icon-levantamento-dados.svg";

@@ -1,5 +1,5 @@
 import PrevencaoCard from "../card-prevencao";
-import { PrevencaoStyle } from "./styled.js";
+import { PrevencaoStyle } from "./styled";
 
 function Prevencao() {
   return (

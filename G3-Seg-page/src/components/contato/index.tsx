@@ -1,5 +1,5 @@
 import Formulario from "../formulario-contato";
-import { Section_contato_Styles } from "./styled.js";
+import { Section_contato_Styles } from "./styled";
 
 function ContatoCard() {
   return (

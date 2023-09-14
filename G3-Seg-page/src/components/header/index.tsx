@@ -1,7 +1,7 @@
 
 import BannerHeader from "./banner/index";
 import Navbar from "./navbar";
-import { HeaderStyled } from "./styled.js";
+import { HeaderStyled } from "./styled";
 
 function HeaderArea() {
   return (

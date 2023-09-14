@@ -1,4 +1,4 @@
-import { CardPrevencaoStyle } from "./styled.js";
+import { CardPrevencaoStyle } from "./styled";
 
 function PrevencaoCard() {
   return (

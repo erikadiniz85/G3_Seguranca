@@ -1,4 +1,4 @@
-import { ButtonsStyle } from "./styled.js";
+import { ButtonsStyle } from "./styled";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 
 function ButtonsNavbar() {

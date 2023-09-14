@@ -1,6 +1,6 @@
 import ButtonsNavbar from "../../buttons-navbar/index.js";
 import Logo from "../../../assets/img/logo.svg";
-import { NavbarStyle } from "./styled.js";
+import { NavbarStyle } from "./styled";
 
 function Navbar() {
   return (

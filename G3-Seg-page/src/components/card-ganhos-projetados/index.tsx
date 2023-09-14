@@ -1,5 +1,5 @@
 import BtnProjeto from "../button-projeto";
-import { CardGanhosProjetadosStyles } from "./style.js";
+import { CardGanhosProjetadosStyles } from "./styled";
 import img1_ganhos from "../../assets/img/img1_ganhos.svg";
 import img2_ganhos from "../../assets/img/img2_ganhos.svg";
 import approve_icon from "../../assets/img/icones/aprove.svg";
