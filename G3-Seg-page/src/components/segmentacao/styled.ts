@@ -32,4 +32,26 @@ export const SegmentacaoStyles = styled.div`
     margin-top: 1rem;
     width: 14.0625rem;
   }
+
+  @media only screen and (max-width: 1023px) {
+    .container {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      margin-left: 6rem;
+    }
+
+    .segmentacao-div {
+      width: 90%;
+      margin-bottom: 3rem;
+    }
+    
+    .segmentacao-p {
+      width: 80%;
+    }
+    .segmentacao-card-wrapper {
+      margin-bottom: 1rem;
+    }
+  }
 `;

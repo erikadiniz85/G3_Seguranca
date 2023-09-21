@@ -36,5 +36,11 @@ export const CardPrevencaoStyle = styled.div`
     
   }
 
-  
+  @media only screen and (max-width: 1023px) {
+    .prevencao-wrapper {
+      display: flex;
+      flex-direction: column;
+      padding-left: 6rem;
+    }
+  }
 `;

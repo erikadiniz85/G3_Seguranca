@@ -76,7 +76,13 @@ export const CardServicosStyle = styled.div`
     text-align: left;
     margin-top: 12.688rem;
     display: flex;
-    
     margin-left: 1.5rem;
   }
+
+
+  /* @media only screen and (max-width: 1023px) {
+    .card_servicos {
+      padding-left: 0rem;
+    }
+  } */
 `;

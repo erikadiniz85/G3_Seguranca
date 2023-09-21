@@ -114,8 +114,6 @@ export const CardGanhosProjetadosStyles = styled.div`
     flex-direction: column;
   }
 
- 
-
   .div_img2 {
     margin-right: 3.75rem;
   }
@@ -123,5 +121,11 @@ export const CardGanhosProjetadosStyles = styled.div`
   .btn_ganhos_proj {
     margin-top: 1rem;
   }
+
+  /* @media only screen and (max-width: 1023px) {
+    .div_geral {
+      padding-left: 6rem;
+    }
+  } */
  
 `;

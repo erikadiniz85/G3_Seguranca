@@ -32,4 +32,19 @@ export const Section_contato_Styles = styled.div`
     font-weight: 400;
     line-height: normal;
   }
+
+  @media only screen and (max-width: 1023px) {
+    .section_contato {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      padding-left: 6rem;
+    }
+
+    .txt_contato_form {
+      width: 100%;
+      margin-bottom: 2rem;
+    }
+  }
 `;

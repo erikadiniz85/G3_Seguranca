@@ -44,5 +44,10 @@ export const PrevencaoStyle = styled.div`
     text-align: center;
   }
 
+  @media only screen and (max-width: 1023px) {
+    .prevencao-card-p {
+      width: 75%;
+    }
+  }
  
 `;

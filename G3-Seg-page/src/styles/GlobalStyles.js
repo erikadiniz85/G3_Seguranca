@@ -6,21 +6,22 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     background: #242424;
-    width: 100%;
+    /* width: 100%;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
+    flex-wrap: wrap; */
     
   }
 
-  @media (min-width: 1920px) {
+  @media (max-width: 1023px) {
     body {
-      background-color: salmon;
-      display:flex;
+      width: 100%;
+      background-color: aquamarine;
+      /* display:flex;
       flex-direction: column;
       flex-wrap: wrap;
-      align-items: center;
-      justify-content: center;
+      align-items: flex-start;
+      justify-content: center; */
     }
   }
   

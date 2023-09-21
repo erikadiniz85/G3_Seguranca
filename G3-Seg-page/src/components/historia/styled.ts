@@ -68,4 +68,38 @@ export const HistoriaG3Styled = styled.div`
   font-weight: bold;
   color: #f9b32a;
 }
+
+  @media only screen and (max-width: 1023px) {
+    .historia {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    .historia-wrapper {
+      display: flex;
+      flex-direction: column;
+      padding-left: 6rem;
+    }
+
+    .history-title {
+      width: 100%;
+      padding-bottom: 2rem;
+      padding-left: 6rem;
+    }
+
+    .acronym {
+      width: 80%;
+    }
+
+    .img-hist-wrapper {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    .img-hist {
+      margin-bottom: 1.5rem;
+    }
+  }
 `;

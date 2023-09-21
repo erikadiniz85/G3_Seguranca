@@ -69,4 +69,24 @@ export const BannerStyled = styled.div`
     height: 16.688rem;
     margin-top: 12.188rem;
   }
+
+
+  @media only screen and (max-width: 1023px) {
+    .banner-header {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .header-text {
+      width: auto;
+      display: flex;
+      margin-left: 6rem;
+    }
+
+    .header-image { //conferir 
+      margin-top: 2rem;
+      margin-left: 6rem;
+      
+    }
+  }
 `;

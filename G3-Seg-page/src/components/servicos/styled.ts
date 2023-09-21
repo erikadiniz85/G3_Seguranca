@@ -5,14 +5,12 @@ export const ServicosStyled = styled.div`
   .servicos {
     width: 100%;
     height: auto;
-    /* background: rgba(36, 36, 36, 0.5); */
     background-image: url(${bg_img_servicos});
-    /* background-image: linear-gradient(left rgba(36,36,36,0));*/
     background-image: opacity(0.1); 
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    margin-top: 6rem;
+    padding-top: 6rem;
     display: flex;
     
   }
@@ -60,9 +58,40 @@ export const ServicosStyled = styled.div`
     margin-top: 1rem;
   }
 
-    
-
   .btn-servicos {
     margin-bottom: 4.75rem;
+  }
+
+
+  @media only screen and (max-width: 1023px) {
+    .servicos {
+      width: 100%;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      padding-left: 6rem;
+      padding-bottom: 2rem;
+    }
+
+    .texto-servicos {
+      width: 80%;
+      display: flex;
+      align-content: flex-start;
+      padding-bottom: 2rem;
+    }
+
+    .h2-servicos {
+      width: 100%;
+    }
+
+    .p-servicos {
+      width: 100%;
+    }
+
+    .coluna-servicos {
+      margin-left: 0rem;
+    }
+
+  
   }
 `;
