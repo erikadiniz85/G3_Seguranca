@@ -11,5 +11,18 @@ export const NavbarStyle = styled.div`
         padding-top: 1rem;
     }
 
+    @media only screen and (max-width: 1023px) {
+        .navbar {
+            width: 50%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+        }
+
+        .logo-header {
+            margin-bottom: 1rem;
+        }
+    }
     
 `

@@ -23,7 +23,6 @@ export const CardPrevencaoStyle = styled.div`
     font-weight: 700;
     line-height: 1.5rem;
     width: 19.25rem;
-    margin-left: 1.5rem;
     margin-bottom: 1.5rem;
     padding-left: 1rem;
     padding-top: 1.63rem;
@@ -31,16 +30,29 @@ export const CardPrevencaoStyle = styled.div`
   }
 
   .column {
+    width:20rem;
     display: flex;
     flex-direction: column;
-    
+    margin-right: 1.5rem;
   }
 
   @media only screen and (max-width: 1023px) {
     .prevencao-wrapper {
+      width:80%;
       display: flex;
       flex-direction: column;
-      padding-left: 6rem;
+      
     }
+
+    .column {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    
+  }
+
+  .prevencao-list {
+    margin-right: 1.5rem;
+  }
   }
 `;

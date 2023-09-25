@@ -12,7 +12,7 @@ export const FooterStyled = styled.div`
         align-items: center;
         padding-top: 1.88rem;
         padding-bottom: 1.87rem;
-        margin-top: 6rem;
+        
     };
 
     .logo-footer {

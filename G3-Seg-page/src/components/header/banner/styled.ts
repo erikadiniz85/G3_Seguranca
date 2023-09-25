@@ -58,10 +58,11 @@ export const BannerStyled = styled.div`
   .btn-go-segmentacao {
     text-decoration: none;
     color: #fd7a1e;
-    font-size: 1rem;
+    font-size: 16px;
     font-style: normal;
     font-weight: 700;
-    line-height: 1.875rem; /* 187.5% */
+    line-height: 30px;
+    letter-spacing: 0em;
   }
 
   .header-image {
@@ -80,13 +81,23 @@ export const BannerStyled = styled.div`
     .header-text {
       width: auto;
       display: flex;
-      margin-left: 6rem;
+      margin-bottom: 2rem;
+    }
+
+    .header-subtitle {
+      width: 90%;
+    }
+
+    .header-paragraph {
+      width: 75%;
     }
 
     .header-image { //conferir 
-      margin-top: 2rem;
-      margin-left: 6rem;
-      
+      margin-top: 3rem;
     }
+
+   .img-banner {
+    margin-top: 1rem;
+   }
   }
 `;

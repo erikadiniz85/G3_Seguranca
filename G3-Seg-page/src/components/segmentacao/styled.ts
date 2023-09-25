@@ -6,8 +6,9 @@ export const SegmentacaoStyles = styled.div`
     height: auto;
     display: flex;
     justify-content: center;
-    margin-top: 6rem;
-    margin-bottom: 6rem;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    background-color: #242424;
   }
 
   .segmentacao-div {
@@ -17,7 +18,7 @@ export const SegmentacaoStyles = styled.div`
 
   .segmentacao-title {
     color: #f9b32a;
-    font-size: 2.1875rem;
+    font-size: 30px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -33,18 +34,21 @@ export const SegmentacaoStyles = styled.div`
     width: 14.0625rem;
   }
 
+
+
   @media only screen and (max-width: 1023px) {
     .container {
       display: flex;
       flex-direction: column;
       flex-wrap: wrap;
       align-items: flex-start;
-      margin-left: 6rem;
+      padding-left: 6rem;
+      padding-top: 3rem;
     }
 
     .segmentacao-div {
-      width: 90%;
-      margin-bottom: 3rem;
+      width: 80%;
+      padding-bottom: 3rem;
     }
     
     .segmentacao-p {

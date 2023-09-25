@@ -2,12 +2,14 @@ import styled from "styled-components";
 
 export const CardGanhosProjetadosStyles = styled.div`
   .div_geral {
+    width: 100%;
     background: #242424;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     align-content: center;
     padding-top: 6rem;
+    padding-bottom: 6rem;
   }
 
   .div_quadro_ganhos {
@@ -15,6 +17,8 @@ export const CardGanhosProjetadosStyles = styled.div`
     background: rgba(44, 44, 44, 0.2);
     box-shadow: 0px 0px 12px 0px rgba(255, 255, 255, 0.24);
     padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
   }
 
   .div_title {
@@ -82,7 +86,7 @@ export const CardGanhosProjetadosStyles = styled.div`
 
   .ganhos_list_left {
     color: #fff;
-    font-size: 0.875rem;
+    font-size: 14px;
     font-style: normal;
     font-weight: 600;
     line-height: 1.5rem;
@@ -99,13 +103,13 @@ export const CardGanhosProjetadosStyles = styled.div`
 
   .li_right {
     display: flex;
-    margin-left: 3.5rem;
+    
     margin-bottom: 0.5rem;
   }
 
   .ganhos_list_right {
     color: #fff;
-    font-size: 0.875rem;
+    font-size: 14px;
     font-style: normal;
     font-weight: 600;
     line-height: 1.5rem;
@@ -122,10 +126,22 @@ export const CardGanhosProjetadosStyles = styled.div`
     margin-top: 1rem;
   }
 
-  /* @media only screen and (max-width: 1023px) {
+  @media only screen and (max-width: 1023px) {
     .div_geral {
       padding-left: 6rem;
+      padding-bottom: 3rem;
+      padding-top: 3rem;
+      display: flex;
+      flex-direction: column;
+      align-content: flex-start;
+      
     }
-  } */
+
+    .div_list_ganhos {
+      display: flex;
+      flex-direction: column;
+    }
+  
+  }
  
 `;

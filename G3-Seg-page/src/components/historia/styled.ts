@@ -15,10 +15,8 @@ export const HistoriaG3Styled = styled.div`
     height: auto;
     color: #f9b32a;
     display: flex;
-    /* flex-direction: row; */
     flex-wrap: wrap;
     justify-content: center;
-    /* align-items: flex-start; */
     padding-top: 6rem;
   }
 
@@ -71,21 +69,26 @@ export const HistoriaG3Styled = styled.div`
 
   @media only screen and (max-width: 1023px) {
     .historia {
+      background-size: cover;
+      width: 100%;
       display: flex;
-      flex-direction: row;
       flex-wrap: wrap;
+      flex-direction: column;
+      padding-left: 6rem;
+      padding-top: 3rem;
+      
     }
 
     .historia-wrapper {
+      width: 100%;
       display: flex;
       flex-direction: column;
-      padding-left: 6rem;
+      padding-top: 2rem;
     }
 
     .history-title {
       width: 100%;
       padding-bottom: 2rem;
-      padding-left: 6rem;
     }
 
     .acronym {
@@ -96,10 +99,14 @@ export const HistoriaG3Styled = styled.div`
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
+      justify-content: flex-start;
+      padding-bottom: 3rem;
     }
 
     .img-hist {
       margin-bottom: 1.5rem;
+      margin-left: 0rem;
+      margin-right: 1.5rem;
     }
   }
 `;

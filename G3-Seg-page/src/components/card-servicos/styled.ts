@@ -80,9 +80,10 @@ export const CardServicosStyle = styled.div`
   }
 
 
-  /* @media only screen and (max-width: 1023px) {
-    .card_servicos {
-      padding-left: 0rem;
-    }
-  } */
+  @media only screen and (max-width: 1023px) {
+    /* .card_servicos {
+      width: 50%;
+    } */
+    
+  }
 `;

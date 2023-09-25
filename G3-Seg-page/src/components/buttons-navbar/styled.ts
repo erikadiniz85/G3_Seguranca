@@ -24,10 +24,11 @@ export const ButtonsStyle = styled.div`
     background-color: #fd7a1e;
     padding: 0.75rem 1rem;
     text-decoration: none;
-
     font-size: 1rem;
     font-style: normal;
     font-weight: 700;
-    line-height: 1.875rem; /* 187.5% */
+    line-height: 30px;
   }
+
+  
 `;

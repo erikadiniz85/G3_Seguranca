@@ -1,8 +1,6 @@
 import styled from "styled-components";
 import img_card_prevencao from "../../assets/img/img-card-prev.svg";
 export const PrevencaoStyle = styled.div`
-
-
   .prevencao-card-geral {
     width: 100%;
     height: auto;
@@ -10,8 +8,11 @@ export const PrevencaoStyle = styled.div`
     background-repeat: no-repeat;
     background-size: cover;
     background-blend-mode: lighten;
-    padding-bottom: 6.44rem;
-    
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
   }
 
   .prevencao-card-text {
@@ -19,23 +20,20 @@ export const PrevencaoStyle = styled.div`
     flex-direction: column;
     flex-wrap: wrap;
     align-content: center;
-    
   }
 
   .prevencao-card-h3 {
     color: #f9b32a;
     text-align: center;
-    font-size: 2.1875rem;
+    font-size: 30px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    margin-top: 5.94rem;
-    
   }
 
   .prevencao-card-p {
-    color: #f9b32a; 
-    font-size: 1rem;
+    color: #f9b32a;
+    font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -44,10 +42,33 @@ export const PrevencaoStyle = styled.div`
     text-align: center;
   }
 
+  /* .prevencao-card-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  } */
+
+  //media query
+
   @media only screen and (max-width: 1023px) {
-    .prevencao-card-p {
-      width: 75%;
+    .prevencao-card-geral {
+      width: 100%;
+      padding-left: 6rem;
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+      background-size: cover;
+      display: flex;
+    }
+
+    .prevencao-card-text {
+      display: flex;
+      align-content: flex-start;
+      align-items: flex-start;
+    }
+
+    .prevencao-card-wrapper {
+      width: 100%;
+      display: flex;
     }
   }
- 
 `;
