@@ -29,71 +29,176 @@ function CardServicos() {
   return (
     <>
       <CardServicosStyle>
+        <div className="card_servicos">
+          <ul className="servicos_col_1">
+            <li className="card">
+              <div className="img_card">
+                <img
+                  className="img-card-servicos"
+                  src={img_levantamento_dados}
+                ></img>
+              </div>
 
-      <div className="card_servicos">
-        <ul className="servicos_col_1">
-          
+              <div className="center_card">
+                <img className="gray-ellipse" src={ellipse}></img>
+                <img
+                  className="icon-card-servicos"
+                  src={icon_levantamento_dados}
+                ></img>
+              </div>
 
-          <li className="card">
-            <img className="img-card-servicos" src={img_levantamento_dados}></img>
-            <img className="gray-ellipse" src={ellipse}></img>
-            <img className="icon-card-servicos" src={icon_levantamento_dados}></img>
-            <h3 className="title-card-servicos">Levantamento de dados</h3>
-          </li>
+              <div className="h3_card_servicos">
+                <h3 className="title-card-servicos">Levantamento de dados</h3>
+              </div>
+            </li>
 
-          <li className="card">
-            <img className="img-card-servicos" src={img_diagnostico}></img>
-            <img className="gray-ellipse" src={ellipse}></img>
-            <img className="icon-card-servicos" src={icone_diagnostico}></img>
-            <h3 className="title-card-servicos">Diagnóstico</h3>
-          </li>
+            <li className="card">
+              <div className="img_card">
+                <img className="img-card-servicos" src={img_diagnostico}></img>
+              </div>
 
-          <li className="card">
-            <img className="img-card-servicos" src={img_construcao_projetos}></img>
-            <img className="gray-ellipse" src={ellipse}></img>
-            <img className="icon-card-servicos" src={icon_construcao_projetos}></img>
-            <h3 className="title-card-servicos">Construção de projetos estruturais</h3>
-          </li>
+              <div className="center_card">
+                <img className="gray-ellipse" src={ellipse}></img>
+                <img
+                  className="icon-card-servicos"
+                  src={icone_diagnostico}
+                ></img>
+              </div>
 
-          <li className="card">
-            <img className="img-card-servicos" src={img_construc_normativos_seg}></img>
-            <img className="gray-ellipse" src={ellipse}></img>
-            <img className="icon-card-servicos" src={icon_construc_normativos_seg}></img>
-            <h3 className="title-card-servicos">Construção normativos de segurança</h3>
-          </li>
-        </ul>
-         
-        <ul className="servicos_col_2">
-          <li className="card">
-            <img className="img-card-servicos" src={img_implantac_treinam}></img>
-            <img className="gray-ellipse" src={ellipse}></img>
-            <img className="icon-card-servicos" src={icon_implantac_treinam}></img>
-            <h3 className="title-card-servicos">Implantação e treinamento</h3>
-          </li>
+              <div className="h3_card_servicos">
+                <h3 className="title-card-servicos">Diagnóstico</h3>
+              </div>
+            </li>
 
-          <li className="card">
-            <img className="img-card-servicos" src={img_acoes_sensib}></img>
-            <img className="gray-ellipse" src={ellipse}></img>
-            <img className="icon-card-servicos" src={icon_acoes_sensib}></img>
-            <h3 className="title-card-servicos">Ações de sensibilização</h3>
-          </li>
+            <li className="card">
+              <div className="img_card">
+                <img
+                  className="img-card-servicos"
+                  src={img_construcao_projetos}
+                ></img>
+              </div>
 
-          <li className="card">
-            <img className="img-card-servicos" src={img_acultur_seg}></img>
-            <img className="gray-ellipse" src={ellipse}></img>
-            <img className="icon-card-servicos" src={icon_acultur_seg}></img>
-            <h3 className="title-card-servicos">Aculturamento segurança</h3>
-          </li>
+              <div className="center_card">
+                <img className="gray-ellipse" src={ellipse}></img>
+                <img
+                  className="icon-card-servicos"
+                  src={icon_construcao_projetos}
+                ></img>
+              </div>
 
-          <li className="card">
-            <img className="img-card-servicos" src={img_manutenc_evoluc}></img>
-            <img className="gray-ellipse" src={ellipse}></img>
-            <img className="icon-card-servicos" src={icon_manutenc_evoluc}></img>
-            <h3 className="title-card-servicos">Manutenção e evolução</h3>
-          </li>
-        
-        </ul>
-      </div>
+              <div className="h3_card_servicos">
+                <h3 className="title-card-servicos">
+                  Construção de projetos estruturais
+                </h3>
+              </div>
+            </li>
+
+            <li className="card">
+              <div className="img_card">
+                <img
+                  className="img-card-servicos"
+                  src={img_construc_normativos_seg}
+                ></img>
+              </div>
+
+              <div className="center_card">
+                <img className="gray-ellipse" src={ellipse}></img>
+                <img
+                  className="icon-card-servicos"
+                  src={icon_construc_normativos_seg}
+                ></img>
+              </div>
+
+              <div className="h3_card_servicos">
+                <h3 className="title-card-servicos">
+                  Construção normativos de segurança
+                </h3>
+              </div>
+            </li>
+          </ul>
+
+          <ul className="servicos_col_2">
+            <li className="card">
+              <div className="img_card">
+                <img
+                  className="img-card-servicos"
+                  src={img_implantac_treinam}
+                ></img>
+              </div>
+
+              <div className="center_card">
+                <img className="gray-ellipse" src={ellipse}></img>
+                <img
+                  className="icon-card-servicos"
+                  src={icon_implantac_treinam}
+                ></img>
+              </div>
+
+              <div className="h3_card_servicos">
+                <h3 className="title-card-servicos">
+                  Implantação e treinamento
+                </h3>
+              </div>
+            </li>
+
+            <li className="card">
+              <div className="img_card">
+                <img className="img-card-servicos" src={img_acoes_sensib}></img>
+              </div>
+
+              <div className="center_card">
+                <img className="gray-ellipse" src={ellipse}></img>
+                <img
+                  className="icon-card-servicos"
+                  src={icon_acoes_sensib}
+                ></img>
+              </div>
+
+              <div className="h3_card_servicos">
+                <h3 className="title-card-servicos">Ações de sensibilização</h3>
+              </div>
+            </li>
+
+            <li className="card">
+              <div className="img_card">
+                <img className="img-card-servicos" src={img_acultur_seg}></img>
+              </div>
+
+              <div className="center_card">
+                <img className="gray-ellipse" src={ellipse}></img>
+                <img
+                  className="icon-card-servicos"
+                  src={icon_acultur_seg}
+                ></img>
+              </div>
+
+              <div className="h3_card_servicos">
+                <h3 className="title-card-servicos">Aculturamento segurança</h3>
+              </div>
+            </li>
+
+            <li className="card">
+              <div className="img_card">
+                <img
+                  className="img-card-servicos"
+                  src={img_manutenc_evoluc}
+                ></img>
+              </div>
+
+              <div className="center_card">
+                <img className="gray-ellipse" src={ellipse}></img>
+                <img
+                  className="icon-card-servicos"
+                  src={icon_manutenc_evoluc}
+                ></img>
+              </div>
+
+              <div className="h3_card_servicos">
+                <h3 className="title-card-servicos">Manutenção e evolução</h3>
+              </div>
+            </li>
+          </ul>
+        </div>
       </CardServicosStyle>
     </>
   );

@@ -1,4 +1,3 @@
-
 import BannerHeader from "./banner/index";
 import Navbar from "./navbar";
 import { HeaderStyled } from "./styled";
@@ -9,6 +8,7 @@ function HeaderArea() {
       <HeaderStyled>
         <div className="header">
           <Navbar />
+
           <BannerHeader />
         </div>
       </HeaderStyled>

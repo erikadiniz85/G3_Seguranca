@@ -17,7 +17,6 @@ function ButtonsNavbar() {
           SOLUÇÕES
         </AnchorLink>
 
-        {/* <button  className="btn-contato"> */}
         <AnchorLink href="#formulario" className="btn-contato-nav">
           FALE COM ESPECIALISTA
         </AnchorLink>

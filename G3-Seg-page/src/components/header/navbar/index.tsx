@@ -6,8 +6,12 @@ function Navbar() {
   return (
     <NavbarStyle>
       <div className="navbar">
-        <img className="logo-header" src={Logo} />
-        <ButtonsNavbar />
+        <div className="nav-logo-header">
+          <img className="logo-header" src={Logo} />
+        </div>
+        <div className="nav-btn-header">
+          <ButtonsNavbar />
+        </div>
       </div>
     </NavbarStyle>
   );

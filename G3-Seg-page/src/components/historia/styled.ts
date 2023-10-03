@@ -3,11 +3,17 @@ import backgroundHistoria from "../../assets/img/background-historia.svg";
 
 export const HistoriaG3Styled = styled.div`
   .historia {
+    width: auto;
+    height: auto;
     background-image: url(${backgroundHistoria});
+    background-image: opacity(0.1);
     background-repeat: no-repeat;
     background-size: cover;
-    width: 100%;
-    height: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 3rem 9rem;
   }
 
   .historia-wrapper {
@@ -16,97 +22,191 @@ export const HistoriaG3Styled = styled.div`
     color: #f9b32a;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
     padding-top: 6rem;
   }
 
+  .img-hist-wrapper {
+    width: 100%;
+    height: auto;
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-bottom: 6rem;
+  }
+
+  .history-h3 {
+    width: 30%;
+  }
+
   .history-title {
-    width: 19.25rem;
     color: #f9b32a;
-    font-size: 2.1875rem;
+    font-size: 32px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
   }
 
   .acronym {
-    width: 30rem;
+    width: 60%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
   }
 
   .history-acronym {
     color: #fff;
-    font-size: 0.875rem;
+    font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: 1.3125rem;
     margin-bottom: 1.5rem;
   }
 
-  .img-hist-wrapper {
-    width: 100%;
-    margin-top: 3rem;
+  .img-hist {
+    width: 40%;
+    margin-left: 1rem;
+    height: auto;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding-bottom: 6rem;
   }
 
-  .img-hist {
-    width: 19.25rem;
-    height: 14.25rem;
+  .history-acronym::first-letter {
+  font-size: 20px;
+  font-weight: bold;
+  color: #f9b32a;
+}
+
+
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .historia {
+    width: auto;
     display: flex;
-    margin-left: 1.5rem;
+    flex-direction: column;
+    padding: 2rem 1rem;
+  }
+
+  .historia-wrapper {
+    width: 100%;
+    height: auto;
+    color: #f9b32a;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 1rem;
+  }
+
+  .img-hist-wrapper {
+    display: none;
+  }
+
+  .history-h3 {
+    width: 100%;
+  }
+
+  .history-title {
+    color: #f9b32a;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  .acronym {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+  }
+
+  .history-acronym {
+    color: #fff;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.3125rem;
+    margin-bottom: 1.5rem;
   }
 
   .history-acronym::first-letter {
   font-size: 18px;
   font-weight: bold;
   color: #f9b32a;
+  }
 }
 
-  @media only screen and (max-width: 1023px) {
-    .historia {
-      background-size: cover;
-      width: 100%;
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: column;
-      padding-left: 6rem;
-      padding-top: 3rem;
-      
-    }
-
-    .historia-wrapper {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      padding-top: 2rem;
-    }
-
-    .history-title {
-      width: 100%;
-      padding-bottom: 2rem;
-    }
-
-    .acronym {
-      width: 80%;
-    }
-
-    .img-hist-wrapper {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: flex-start;
-      padding-bottom: 3rem;
-    }
-
-    .img-hist {
-      margin-bottom: 1.5rem;
-      margin-left: 0rem;
-      margin-right: 1.5rem;
-    }
+@media (min-width: 768px) and (max-width: 1024px) {
+  .historia {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 3rem 3rem;
   }
+
+  .historia-wrapper {
+    width: 100%;
+    height: auto;
+    color: #f9b32a;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 1rem;
+  }
+
+  .img-hist-wrapper {
+    display: none;
+  }
+
+  .history-h3 {
+    width: 100%;
+  }
+
+  .history-title {
+    color: #f9b32a;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  .acronym {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+  }
+
+  .history-acronym {
+    color: #fff;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.3125rem;
+    margin-bottom: 1.5rem;
+  }
+
+
+  .history-acronym::first-letter {
+  font-size: 18px;
+  font-weight: bold;
+  color: #f9b32a;
+}
+}
+
+/* Desktop */
+/* @media (min-width: 1025px) {
+  
+      background-size: cover;
+      width: auto;
+      height: auto;
+      display: flex;
+      justify-content: center;
+      padding: 1rem 9rem;
+    
+  } */
 `;

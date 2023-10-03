@@ -6,53 +6,62 @@ export const HeaderStyled = styled.div`
     background-image: url(${backgroundHeader});
     background-repeat: no-repeat;
     background-size: cover;
-    width: 100%;
+    width: auto;
     height: auto;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
+    align-content: center;
+    padding: 1rem 9rem;
   }
 
-  
+  .header-1 {
+    width: 30%;
+  }
+
+  .header-2{
+    width: 70%;
+  }
+
+
   /*  Celulares  */
   @media (min-width: 320px) and (max-width: 767px) {
     .header {
-      width: 100%;
-      background-color: pink; // retirar
+      width: auto;
+      height: auto;
       background-size: cover;
-      padding-bottom: 3rem;
-      padding-left: 6rem;
+      padding: 1rem 1rem 3rem 1rem;
       display: flex;
+      justify-content: center;
     }
-  }
 
+    
+  }
 
   /* Tablets */
   @media (min-width: 768px) and (max-width: 1024px) {
     .header {
-      width: 100%;
+      width: auto;
+      height: auto;
       background-color: aqua; //retirar
       background-size: cover;
-      padding-bottom: 3rem;
-      padding-left: 3rem;
+      padding: 1rem 3rem 3rem 3rem;
       display: flex;
+      justify-content: center;
     }
-  }
 
+  }
+ 
 
   /* Desktop */
   @media (min-width: 1025px) {
     .header {
-      width: 100%;
-      background-color: greenyellow; // retirar após teste
+      width: auto;
+      height: auto;
       display: flex;
       justify-content: center;
       background-size: cover;
-      padding-bottom: 3rem;
-      padding-left: 6rem;
+      padding: 1rem 9rem;
     }
   }
-  
- 
-
- 
 `;

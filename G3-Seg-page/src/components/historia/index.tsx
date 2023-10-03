@@ -7,7 +7,9 @@ function HistoriaG3() {
       <HistoriaG3Styled>
         <div className="historia" id="historia">
           <div className="historia-wrapper">
-            <h3 className="history-title">NOSSA TRAJETÓRIA</h3>
+            <div className="history-h3">
+              <h3 className="history-title">História da G3 Segurança Patrimonial</h3>
+            </div>
 
             <div className="acronym">
               <p className="history-acronym">

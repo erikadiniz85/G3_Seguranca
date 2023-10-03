@@ -4,24 +4,27 @@ export const BannerStyled = styled.div`
   .banner-header {
     width: 100%;
     height: auto;
+    margin-top: 7rem;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: center;
   }
 
   .header-text {
-    width: 32.125rem;
+    width: 60%;
     color: #ffffff;
-    margin-top: 7.625rem;
-    margin-bottom: 7rem;
     display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .header-image {
+    width: 40%;
+    height: auto;
+    display: flex;
+    justify-content: flex-end;
   }
 
   .header-subtitle {
+    width: 100%;
     font-size: 48px;
     font-weight: 700;
     line-height: 60px;
@@ -30,6 +33,7 @@ export const BannerStyled = styled.div`
   }
 
   .header-paragraph {
+    width: 100%;
     font-size: 16px;
     font-weight: 400;
     line-height: 20px;
@@ -39,65 +43,161 @@ export const BannerStyled = styled.div`
   }
 
   .btn-header-2 {
-    margin-top: 1.5rem;
+    width: 50%;
     display: flex;
+    margin-bottom: 1rem;
   }
 
-  .btn-conheca {
-    background: transparent;
-    border: 2px solid #fd7a1e;
-    color: #fd7a1e;
-    padding: 0.75rem 1rem;
-    margin-left: 1.875rem;
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 30px;
-    letter-spacing: 0em;
+  .btn-comece-header {
+    margin-right: 1.9rem;
   }
 
-  .btn-go-segmentacao {
-    text-decoration: none;
-    color: #fd7a1e;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 30px;
-    letter-spacing: 0em;
-  }
-
-  .header-image {
-    width: 29.625rem;
-    height: 16.688rem;
-    margin-top: 12.188rem;
-  }
-
-
-  @media only screen and (max-width: 1023px) {
+  /*  Celulares  */
+  @media (min-width: 320px) and (max-width: 767px) {
     .banner-header {
+      margin-top: 3rem;
       display: flex;
       flex-direction: column;
+      width: 100%;
+      flex-wrap: wrap;
+      align-content: flex-start;
     }
 
     .header-text {
-      width: auto;
-      display: flex;
       margin-bottom: 2rem;
+      width: 100%;
+
     }
 
     .header-subtitle {
-      width: 90%;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 30px;
+      letter-spacing: 0em;
+      text-align: left;
     }
 
     .header-paragraph {
-      width: 75%;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 20px;
+      letter-spacing: 0em;
+      text-align: left;
+      margin-top: 1rem;
     }
 
-    .header-image { //conferir 
-      margin-top: 3rem;
+    .header-image {
+      width: 100%;
+      height: auto;
+      display: flex;
+      justify-content: flex-start;
+      margin-bottom:1rem;
     }
 
-   .img-banner {
-    margin-top: 1rem;
-   }
+    .img-banner {
+      width: 90%;
+    }
+
+    .btn-header-2 {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      margin-top: 2rem;
+    }
+
+    .btn-comece-header {
+      margin-bottom: 2rem;
+    }
+
+    .btn-conheca-header {
+      width: 100%;
+      display: flex;
+    }
+
+  }
+
+  /* Tablets */
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .banner-header {
+      width: 100%;
+      height: auto;
+      margin-top: 1rem;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .header-text {
+      width: 50%;
+      height: auto;
+      margin-bottom: 2rem;
+      display: flex;
+    }
+
+    .header-image {
+      width: 50%;
+      height: auto;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .header-paragraph {
+      width: 90%;
+    }
+
+    .img-banner {
+      width: 100%;
+    }
+
+    .btn-header-2 {
+      width: 100%;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      display: flex;
+    }
+  }
+
+  // Desktop
+  @media (min-width: 1025px) {
+    .banner-header {
+      width: 100%;
+      height: auto;
+      margin-top: 1rem;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .header-text {
+      width: 50%;
+      height: auto;
+      margin-bottom: 5rem;
+      display: flex;
+    }
+
+    .header-image {
+      width: 50%;
+      height: auto;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .header-paragraph {
+      width: 90%;
+    }
+
+    .img-banner {
+      width: 90%;
+    }
+
+    .btn-header-2 {
+      
+      width: 100%;
+      margin-top: -1rem;
+      margin-bottom: 1rem;
+      display: flex;
+    }
   }
 `;

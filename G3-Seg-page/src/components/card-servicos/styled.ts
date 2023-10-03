@@ -1,89 +1,184 @@
 import styled from "styled-components";
 
 export const CardServicosStyle = styled.div`
-
   .card_servicos {
     width: 100%;
+    height: auto;
     display: flex;
-    gap: 3.5%;
-
+    flex-direction: row;
   }
 
   .servicos_col_1 {
-    display: flex;
     width: 50%;
+    display: flex;
     flex-direction: column;
-    
   }
 
   .servicos_col_2 {
-    display: flex;
     width: 50%;
+    display: flex;
     flex-direction: column;
+    margin-left: 1rem;
   }
 
   .card {
-    width: 19.25rem;
-    height: 19.063rem;
-    background: #2C2C2C;
+    width: 100%;
+    height: auto;
+    background: #2c2c2c;
     box-shadow: 0px 0px 12px rgba(255, 255, 255, 0.12);
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: flex-start;
-    z-index: -5;
-    margin-bottom: 1.5rem;
-    
+    justify-content: center;
+    margin-bottom: 0.5rem;
+  }
+
+  .img_card {
+    width: 100%;
+    height: auto;
   }
 
   .img-card-servicos {
-    position: absolute;
-    z-index: -4;
-    
+    width: 100%;
+    height: auto;
+  }
+
+  .h3_card_servicos {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .center_card {
+    margin-left: 1.5rem;
+    width: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .icon-card-servicos {
     width: 1.25rem;
     height: auto;
     position: absolute;
-    z-index: -2;
-    margin-top: 9.1rem;
-    margin-left: 2.156rem;
-    
+    z-index: 1;
   }
 
   .gray-ellipse {
     background: linear-gradient(180deg, #2f5464 0%, #1c4354 100%);
     position: absolute;
-    z-index: -3;
     width: 2.5rem;
     height: 2.5rem;
     border-radius: 50%;
-    margin-top: 8.5rem;
-    margin-left: 1.5rem;
-
   }
 
   .title-card-servicos {
-    width: 16.25rem;
     color: #ffffff;
-    font-style:normal;
+    font-style: normal;
     font-size: 16px;
     font-weight: 600;
     line-height: 24px;
     letter-spacing: 0em;
     text-align: left;
-    margin-top: 12.688rem;
+    margin: 3rem 1.5rem;
+  }
+
+  /*  Celulares  */
+  @media (min-width: 320px) and (max-width: 767px) {
+    .card_servicos {
+    width: 100%;
+    height: auto;
     display: flex;
-    margin-left: 1.5rem;
+    flex-direction: row;
   }
 
-
-  @media only screen and (max-width: 1023px) {
-    /* .card_servicos {
-      width: 50%;
-    } */
-    
+  .servicos_col_1 {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
   }
+
+  .servicos_col_2 {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  .img_card {
+    width: 100%;
+    height: auto;
+  }
+
+  .img-card-servicos {
+    width: 100%;
+    height: auto;
+  }
+
+  .center_card {
+    margin-left: 1rem;
+  }
+
+  .title-card-servicos {
+    color: #ffffff;
+    font-style: normal;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin: 2rem 1.5rem;
+    }
+  }
+
+  /* Tablets */
+  @media (min-width: 768px) and (max-width: 1024px) {
+   
+    .card_servicos {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .servicos_col_1 {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .servicos_col_2 {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
+  }
+
+  .img_card {
+    width: 100%;
+    height: auto;
+  }
+
+  .img-card-servicos {
+    width: 100%;
+    height: auto;
+  }
+
+  .center_card {
+    margin-left: 1rem;
+  }
+
+  .title-card-servicos {
+    color: #ffffff;
+    font-style: normal;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin: 2rem 1.5rem;
+    }
+  }
+  
 `;

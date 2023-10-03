@@ -3,48 +3,39 @@ import bg_img_servicos from "../../assets/img/img_bg_servicos.svg";
 
 export const ServicosStyled = styled.div`
   .servicos {
-    width: 100%;
+    width: auto;
     height: auto;
     background-image: url(${bg_img_servicos});
-    background-image: opacity(0.1); 
+    background-image: opacity(0.1);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
-    padding-top: 6rem;
-    padding-bottom: 3rem;
     display: flex;
-    
+    flex-direction: row;
+    padding: 3rem 9rem;
   }
 
   .texto-servicos {
+    width: 40%;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    align-content: flex-end;
     color: #f9b32a;
-    flex-grow: 3;
-    z-index: 2;
   }
 
   .coluna-servicos {
+    width: 60%;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    align-items: flex-start;
-    align-content: flex-start;
-    flex-grow: 3;
-    margin-left: 3rem;
-    z-index: 2;
+    align-content: flex-end;
   }
 
   .h2-servicos {
     color: #f9b32a;
-    font-size: 35px;
+    font-size: 36px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    width: 19.25rem;
+    width: 100%;
   }
 
   .p-servicos {
@@ -53,46 +44,87 @@ export const ServicosStyled = styled.div`
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    width: 14.0625rem;
     margin-top: 1rem;
+    width: 100%;
   }
 
   .btn-servicos {
-    margin-bottom: 4.75rem;
+    margin-top: 1rem;
   }
 
-
-  @media only screen and (max-width: 1023px) {
+  /*  Celulares  */
+  @media (min-width: 320px) and (max-width: 767px) {
     .servicos {
-      width: 100%;
-      background-size: cover;
+      width: auto;
+      height: auto;
+      padding: 1rem 1rem;
       display: flex;
       flex-direction: column;
-      padding-left: 6rem;
-      padding-top: 3rem;
-      padding-bottom: 3rem;
+      align-items: center;
     }
 
     .texto-servicos {
-      width: 80%;
+      width: 100%;
       display: flex;
-      align-content: flex-start;
-      padding-bottom: 2rem;
+      flex-direction: column;
+      color: #f9b32a;
+    }
+
+    .coluna-servicos {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      margin-top: 2rem;
     }
 
     .h2-servicos {
+      color: #f9b32a;
+      font-size: 36px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
       width: 100%;
     }
 
     .p-servicos {
+      color: #f9b32a;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      margin-top: 1rem;
       width: 100%;
     }
 
-    .coluna-servicos {
-      margin-left: 0rem;
+    .btn-servicos {
+      margin-top: 1rem;
+    }
+  }
+
+  /* Tablets */
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .servicos {
       
+      padding: 3rem 3rem;
+      flex-direction: row;
     }
 
-  
+    .texto-servicos {
+      margin-right: 2rem;
+    }
+  }
+
+
+  /* Desktop */
+  @media (min-width: 1025px) {
+    .servicos {
+      display: flex;
+      justify-content: center;
+    }
+
+    .texto-servicos {
+      margin-right: 2rem;
+    }
   }
 `;
