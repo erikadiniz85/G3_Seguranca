@@ -8,11 +8,10 @@ export const PrevencaoStyle = styled.div`
     background-repeat: no-repeat;
     background-size: cover;
     background-blend-mode: lighten;
-    padding-top: 6rem;
-    padding-bottom: 6rem;
+    padding: 6rem;
     display: flex;
     flex-direction: column;
-    align-content: center;
+    align-items: center;
   }
 
   .prevencao-card-text {
@@ -39,16 +38,15 @@ export const PrevencaoStyle = styled.div`
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    width: 45rem;
-    margin-top: 1rem;
     text-align: center;
+    margin-top: 1rem;
   }
 
   .prevencao-card-wrapper {
     width: 100%;
     height: auto;
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
   }
 
   

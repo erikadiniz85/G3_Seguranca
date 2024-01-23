@@ -4,9 +4,9 @@ import Servicos from "./src/components/servicos/index.js";
 import HistoriaG3 from "./src/components/historia/index.js";
 import Segmentacao from "./src/components/segmentacao/index.js";
 import Prevencao from "./src/components/prevencao/index.js";
-// import GanhosProjetadosCard from "./src/components/card-ganhos-projetados/index.js";
-// import ContatoCard from "./src/components/contato/index.js";
-// import FooterArea from "./src/components/footer/index.js";
+import GanhosProjetadosCard from "./src/components/card-ganhos-projetados/index.js"; // ajustar
+import ContatoCard from "./src/components/contato/index.js"; //ajustar
+import FooterArea from "./src/components/footer/index.js"; //ajustar
 
 function App() {
   return (
@@ -17,10 +17,10 @@ function App() {
       <HistoriaG3 />
       <Segmentacao />
       <Prevencao />
-      {/* 
+       
       <GanhosProjetadosCard />
       <ContatoCard />
-      <FooterArea /> */}
+      <FooterArea /> 
     </>
   );
 }
