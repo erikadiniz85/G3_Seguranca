@@ -88,7 +88,7 @@ function CardServicos() {
 
               <div className="h3_card_servicos">
                 <h3 className="title-card-servicos">
-                  Construção de projetos estruturais
+                  Projetos estruturais
                 </h3>
               </div>
             </li>
@@ -111,7 +111,7 @@ function CardServicos() {
 
               <div className="h3_card_servicos">
                 <h3 className="title-card-servicos">
-                  Construção normativos de segurança
+                  Normativos de segurança
                 </h3>
               </div>
             </li>

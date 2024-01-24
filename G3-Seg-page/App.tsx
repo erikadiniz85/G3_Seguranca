@@ -17,10 +17,10 @@ function App() {
       <HistoriaG3 />
       <Segmentacao />
       <Prevencao />
-       
+      
       <GanhosProjetadosCard />
       <ContatoCard />
-      <FooterArea /> 
+      <FooterArea />
     </>
   );
 }
