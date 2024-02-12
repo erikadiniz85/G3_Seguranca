@@ -13,34 +13,34 @@ function PrevencaoCard() {
         <div className="prevencao-wrapper">
           <ul className="row-1">
             <li className="prevencao-list">
-              <img src={icon_comp_tecnica} />
+              <img className="icon" src={icon_comp_tecnica} />
               <p>Competência técnica</p>
             </li>
 
             <li className="prevencao-list">
-              <img src={icon_comunicacao} />
+              <img className="icon" src={icon_comunicacao} />
               <p>Comunicação</p>
             </li>
 
             <li className="prevencao-list">
-              <img src={icon_foco_result} />
+              <img className="icon" src={icon_foco_result} />
               <p>Foco em resultado</p>
             </li>
           </ul>
 
           <ul className="row-2">
             <li className="prevencao-list">
-              <img src={icon_lideranca} />
+              <img className="icon" src={icon_lideranca} />
               <p>Liderança</p>
             </li>
 
             <li className="prevencao-list">
-              <img src={icon_planejamento} />
+              <img className="icon" src={icon_planejamento} />
               <p>Planejamento</p>
             </li>
 
             <li className="prevencao-list">
-              <img src={icon_trab_equipe} />
+              <img className="icon" src={icon_trab_equipe} />
               <p>Trabalho em equipe</p>
             </li>
           </ul>

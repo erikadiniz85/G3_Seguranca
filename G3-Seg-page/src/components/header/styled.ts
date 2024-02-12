@@ -34,7 +34,7 @@ export const HeaderStyled = styled.div`
       display: flex;
       justify-content: center;
     }
-
+  
     
   }
 
@@ -43,7 +43,6 @@ export const HeaderStyled = styled.div`
     .header {
       width: auto;
       height: auto;
-      background-color: aqua; //retirar
       background-size: cover;
       padding: 1rem 3rem 3rem 3rem;
       display: flex;

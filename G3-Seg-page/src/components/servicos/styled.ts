@@ -2,7 +2,7 @@ import styled from "styled-components";
 import bg_img_servicos from "../../assets/img/img_bg_servicos.svg";
 
 export const ServicosStyled = styled.div`
-  .servicos {
+  #servicos {
     width: auto;
     height: auto;
     background-image: url(${bg_img_servicos});
@@ -54,7 +54,7 @@ export const ServicosStyled = styled.div`
 
   /*  Celulares  */
   @media (min-width: 320px) and (max-width: 767px) {
-    .servicos {
+    #servicos {
       width: auto;
       height: auto;
       padding: 1rem 1rem;
@@ -104,7 +104,7 @@ export const ServicosStyled = styled.div`
 
   /* Tablets */
   @media (min-width: 768px) and (max-width: 1024px) {
-    .servicos {
+    #servicos {
       
       padding: 3rem 3rem;
       flex-direction: row;

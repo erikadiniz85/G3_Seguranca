@@ -38,15 +38,18 @@ export const NavbarStyle = styled.div`
     .logo-header {
       margin-bottom: 1rem;
     }
+  
+
   }
 
   /* Tablets */
-  @media (min-width: 768px) and (max-width: 1024px) {
+  @media (min-width: 768px)and(max-width: 1024px) {
     .navbar {
       width: 100%;
       display: flex;
       flex-direction: row;
       align-items: center;
+      background-color: pink;//retirar
 
     }
 
@@ -69,19 +72,17 @@ export const NavbarStyle = styled.div`
       width: 100%;
       display: flex;
       flex-direction: row;
+      flex-wrap: nowrap;
       align-items: center;
+      
     }
 
     .nav-logo-header {
-      width: 50%;
-    }
-
-    .logo-header {
-      width: 30%;
+      width: 35%;
     }
 
     .nav-btn-header {
-      width: 50%;
+      width: 75%;
     }
   }
 `;

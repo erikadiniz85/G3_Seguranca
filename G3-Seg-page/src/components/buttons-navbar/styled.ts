@@ -53,7 +53,7 @@ export const ButtonsStyle = styled.div`
   /* Desktop */
   @media (min-width: 1025px) {
     .buttons-navbar {
-      width: 100%;
+    width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import img_card_prevencao from "../../assets/img/img-card-prev.svg";
 export const PrevencaoStyle = styled.div`
-  .prevencao-card-geral {
+  #prevencao {
     width: auto;
     height: auto;
     background-image: url(${img_card_prevencao});
@@ -47,12 +47,14 @@ export const PrevencaoStyle = styled.div`
     height: auto;
     display: flex;
     justify-content: center;
+
   }
 
   
   /* Mobile */
   @media (min-width: 320px) and (max-width: 767px) {
-    .prevencao-card-geral {
+
+    #prevencao {
     width: auto;
     height: auto;
     background-size: cover;
@@ -65,7 +67,7 @@ export const PrevencaoStyle = styled.div`
   .prevencao-card-text {
     width:100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
     align-content: center;
   }
@@ -73,7 +75,7 @@ export const PrevencaoStyle = styled.div`
   .prevencao-card-h3 {
     color: #f9b32a;
     text-align: center;
-    font-size: 30px;
+    font-size: 20px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -81,15 +83,21 @@ export const PrevencaoStyle = styled.div`
 
   .prevencao-card-p {
     color: #f9b32a;
-    font-size: 16px;
+    font-size: 14px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    width: 45rem;
     margin-top: 1rem;
     text-align: center;
   }
 
+  .prevencao-card-wrapper {
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+
+  }
 
   }
 

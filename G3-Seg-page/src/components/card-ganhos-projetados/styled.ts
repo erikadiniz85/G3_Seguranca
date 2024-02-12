@@ -13,6 +13,8 @@ export const CardGanhosProjetadosStyles = styled.div`
   }
 
   .div_quadro_ganhos {
+    width: 50%;
+    height: auto;
     border-radius: 1rem;
     background: rgba(44, 44, 44, 0.2);
     box-shadow: 0px 0px 12px 0px rgba(255, 255, 255, 0.24);
@@ -22,6 +24,7 @@ export const CardGanhosProjetadosStyles = styled.div`
   }
 
   .div_title {
+    width: auto;
     color: #f9b32a;
     margin-bottom: 3rem;
     display: flex;
@@ -51,25 +54,42 @@ export const CardGanhosProjetadosStyles = styled.div`
     margin-top: 1rem;
   }
 
-  .ganhos_txt_img {
+  .ganhos_negocio {
+    width: 100%;
     display: flex;
     flex-direction: row;
     align-content: center;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
+  }
+
+  .prejuizos_evitados {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
   }
 
   .div_ganhos {
+    width: 60%;
+    height: auto;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     align-content: center;
-    width: auto;
-    height: auto;
+    align-items: flex-end;
+  }
+
+  .div_img1 {
+    width: 40%;
   }
 
   .div_ganhos_title {
+    width: 90%;
     color: #fff;
     font-size: 1.25rem;
     font-style: normal;
@@ -79,9 +99,13 @@ export const CardGanhosProjetadosStyles = styled.div`
     margin-bottom: 0.75rem;
   }
 
+
   .div_list_ganhos {
+    width: 100%;
     display: flex;
-    
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
   }
 
   .ganhos_list_left {
@@ -95,15 +119,18 @@ export const CardGanhosProjetadosStyles = styled.div`
     flex-direction: column;
   }
 
+  .p_ganhos {
+    margin-left: 0.3rem;
+  }
+
   .li_left {
+    width: 100%;
     display: flex;
     margin-bottom: 0.5rem;
-    
   }
 
   .li_right {
     display: flex;
-    
     margin-bottom: 0.5rem;
   }
 
@@ -118,30 +145,85 @@ export const CardGanhosProjetadosStyles = styled.div`
     flex-direction: column;
   }
 
+  .p_prejuizos {
+    margin-left: 0.3rem;
+  }
+
   .div_img2 {
     margin-right: 3.75rem;
   }
 
-  .btn_ganhos_proj {
-    margin-top: 1rem;
-  }
+  .div_ganhos > .btn_ganhos_proj{
+      margin-top: 3rem;
+    }
 
-  @media only screen and (max-width: 1023px) {
+  // Mobile
+
+  @media (min-width: 320px) and (max-width: 767px) {
     .div_geral {
-      padding-left: 6rem;
-      padding-bottom: 3rem;
+      width: 100%;
       padding-top: 3rem;
+      padding-bottom: 3rem;
+    }
+
+    .div_quadro_ganhos {
+      width: 70%;
+      padding: 1.5rem;
       display: flex;
-      flex-direction: column;
-      align-content: flex-start;
-      
+    }
+
+    .div_title {
+      width: 100%;
+    }
+
+    .div_title_h3 {
+      font-size: 22px;
+      width: 100%;
+    }
+
+    .div_title_p {
+      font-size: 12px;
+      width: 100%;
     }
 
     .div_list_ganhos {
       display: flex;
       flex-direction: column;
     }
-  
+
+    .div_ganhos_title {
+      width: 100%;
+      font-size: 18px;
+    }
+
+    .imagem_1 {
+      display: none;
+    }
+
+    .prejuizos_evitados {
+      display: flex;
+      flex-direction: column;
+      margin-top: 3rem;
+    }
+
+    .imagem_2 {
+      display: none;
+    }
+
+    .div_ganhos {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .btn_ganhos_proj{
+      margin-top: 2rem;
+      width: auto;
+    }
+
+
+
+    
   }
- 
 `;

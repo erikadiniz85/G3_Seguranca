@@ -18,79 +18,85 @@ function GanhosProjetadosCard() {
               </p>
             </div>
 
-            <div className="ganhos_txt_img">
+            <div className="ganhos_negocio">
               <div className="div_ganhos">
-                <h4 className="div_ganhos_title">Ganhos para seu negócio</h4>
+                <div className="div_ganhos_title">
+                  <h4 className="div_ganhos_h4">Ganhos para seu negócio</h4>
+                </div>
 
                 <div className="div_list_ganhos">
                   <ul className="ganhos_list_left">
                     <li className="li_left">
                       <img src={approve_icon} />
-                      <p>Controle</p>
+                      <p className="p_ganhos">Controle</p>
                     </li>
                     <li className="li_left">
                       <img src={approve_icon} />
-                      <p>Gestão de estoque</p>
+                      <p className="p_ganhos" >Gestão de estoque</p>
                     </li>
                     <li className="li_left">
                       <img src={approve_icon} />
-                      <p>Serviços</p>
+                      <p className="p_ganhos">Serviços</p>
                     </li>
                   </ul>
 
                   <ul className="ganhos_list_right">
                     <li className="li_right">
                       <img src={approve_icon} />
-                      <p>Imagem</p>
+                      <p className="p_ganhos">Imagem</p>
                     </li>
                     <li className="li_right">
                       <img src={approve_icon} />
-                      <p>Cliente</p>
+                      <p className="p_ganhos">Cliente</p>
                     </li>
                     <li className="li_right">
                       <img src={approve_icon} />
-                      <p>Colaboradores</p>
+                      <p className="p_ganhos">Colaboradores</p>
                     </li>
                   </ul>
                 </div>
               </div>
 
               <div className="div_img1">
-                <img src={img1_ganhos} alt="n" />
+                <img className="imagem_1" src={img1_ganhos} alt="n" />
               </div>
             </div>
 
-            <div className="ganhos_txt_img">
+            <div className="prejuizos_evitados">
               <div className="div_img2">
-                <img src={img2_ganhos} />
+                <img className="imagem_2" src={img2_ganhos} />
               </div>
+
               <div className="div_ganhos">
-                <h4 className="div_ganhos_title">Prejuízos evitados</h4>
+                <div className="div_ganhos_title">
+
+                <h4 >Prejuízos evitados</h4>
+                </div>
 
                 <div className="div_list_ganhos">
                   <ul className="ganhos_list_left">
                     <li className="li_left">
                       <img src={approve_icon} />
-                      <p>Reduções de custos</p>
+                      <p className="p_prejuizos">Reduções de custos</p>
                     </li>
                     <li className="li_left">
                       <img src={approve_icon} />
-                      <p>Passivos trabalhistas</p>
+                      <p className="p_prejuizos">Passivos trabalhistas</p>
                     </li>
                     <li className="li_left">
                       <img src={approve_icon} />
-                      <p>Redução de perdas</p>
+                      <p className="p_prejuizos">Redução de perdas</p>
                     </li>
                   </ul>
 
                   <ul className="ganhos_list_right">
                     <li className="li_right">
                       <img src={approve_icon} />
-                      <p>Redução de avarias</p>
+                      <p className="p_prejuizos">Redução de avarias</p>
                     </li>
                     <li className="li_right">
                       <img src={approve_icon} />
-                      <p>Passivos cíveis</p>
+                      <p className="p_prejuizos">Passivos cíveis</p>
                     </li>
                   </ul>
                 </div>
