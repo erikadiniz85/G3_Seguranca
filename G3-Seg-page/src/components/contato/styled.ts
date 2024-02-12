@@ -35,20 +35,42 @@ export const Section_contato_Styles = styled.div`
     line-height: normal;
   }
 
-  @media only screen and (max-width: 1023px) {
+  // Mobile
+
+  @media (min-width: 320px) and (max-width: 767px){
     .section_contato {
+      width: 90%;
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       flex-wrap: wrap;
       justify-content: flex-start;
-      padding-left: 6rem;
-      padding-top: 3rem;
-      padding-bottom: 3rem;
+      padding: 1rem;
     }
 
-    .txt_contato_form {
+    #formulario {
       width: 100%;
-      padding-bottom: 2rem;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 2rem;
     }
+
+    .title_contato_form{
+      font-size: 26px;
+      width: 100%;
+    }
+
+    .p_contato_form {
+      width: 100%;
+      font-size: 14px;
+      margin-top: 1rem;
+      display: flex;
+    }
+
+  
+
   }
+
+  
 `;

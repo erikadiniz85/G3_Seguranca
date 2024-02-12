@@ -38,5 +38,24 @@ export const FooterStyled = styled.div`
     line-height: 21px;
 }
 
+@media (min-width: 320px) and (max-width: 767px) {
+    .footer {
+        width: 100%;
+       display: flex;
+       flex-direction: row;
+       flex-wrap: wrap;
+       justify-content: center;
+       
+    }
+  
+    .logo-footer {
+        margin: 0 1rem;
+        
+    }
+
+    .frase-1{
+        margin-top: 1rem;
+    }
+}
 `;
 

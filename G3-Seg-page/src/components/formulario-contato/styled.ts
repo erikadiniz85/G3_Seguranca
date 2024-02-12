@@ -120,4 +120,35 @@ export const FormularioStyles = styled.div`
     margin-left: 1rem;
     display: flex;
   }
+
+  @media (min-width: 320px) and (max-width: 767px){
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      font-size: 16px;
+      width: 95%;
+      height: auto;
+    
+    }
+
+    .form {
+      width: 100%;
+      padding: 0;
+    }
+
+  .input {
+    width: 100%;
+    font-size: 16px;
+    display: flex;
+  }    
+   .form-input {
+    width: 100%;
+   }
+
+   .textarea {
+    width: 100%;
+    font-size: 16px;
+   }
+  }
 `;
