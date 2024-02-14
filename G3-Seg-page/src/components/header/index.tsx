@@ -8,7 +8,6 @@ function HeaderArea() {
       <HeaderStyled>
         <div className="header">
           <Navbar />
-
           <BannerHeader />
         </div>
       </HeaderStyled>

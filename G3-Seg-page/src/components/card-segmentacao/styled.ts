@@ -61,11 +61,13 @@ export const CardSegmentacaoStyles = styled.div`
     height: auto;
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
     
   }
 
   .segmentacao {
-    width: 100%;
+    width: 95%;
     height: auto;
     background-color: #2c2c2c;
     box-shadow: 0px 0px 12px 0px #ffffff1f;
@@ -83,6 +85,7 @@ export const CardSegmentacaoStyles = styled.div`
     display: flex;
     flex-direction: column;
     width: auto;
+    margin: 1rem 0.5rem;
     
   }
 

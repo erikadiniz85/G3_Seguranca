@@ -9,6 +9,10 @@ export const ButtonsStyle = styled.div`
     justify-content: space-between;
   }
 
+  .btn-nav:hover {
+    background: rgba(255, 174, 55, 0.1);
+  }
+
   .btn-nav {
     color: #fd7a1e;
     border: none;
@@ -17,6 +21,12 @@ export const ButtonsStyle = styled.div`
     font-size: 16px;
     line-height: 30px;
     text-decoration: none;
+    width: 100%;
+  }
+
+  .btn-contato-nav:hover {
+    background: #ffffff;
+    color: #fd7a1e;
   }
 
   .btn-contato-nav {
@@ -36,27 +46,31 @@ export const ButtonsStyle = styled.div`
       display: flex;
       flex-direction: column;
       align-items: flex-start;
+      margin-top: 1rem;
+    }
+
+    .btn-nav {
+      padding: 0.5rem;
     }
   }
 
   /* Tablets */
   @media (min-width: 768px) and (max-width: 1024px) {
     .buttons-navbar {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-  }
-
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
   }
 
   /* Desktop */
   @media (min-width: 1025px) {
     .buttons-navbar {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
     }
 
     .btn-nav {

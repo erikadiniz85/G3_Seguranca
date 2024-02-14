@@ -15,13 +15,7 @@ export const HeaderStyled = styled.div`
     padding: 1rem 9rem;
   }
 
-  .header-1 {
-    width: 30%;
-  }
-
-  .header-2{
-    width: 70%;
-  }
+  
 
 
   /*  Celulares  */

@@ -55,7 +55,7 @@ export const BannerStyled = styled.div`
   /*  Celulares  */
   @media (min-width: 320px) and (max-width: 767px) {
     .banner-header {
-      margin-top: 3rem;
+      margin-top: 2rem;
       display: flex;
       flex-direction: column;
       width: 100%;
@@ -66,21 +66,18 @@ export const BannerStyled = styled.div`
     .header-text {
       margin-bottom: 2rem;
       width: 100%;
+      height: auto;
 
     }
 
     .header-subtitle {
-      font-size: 24px;
-      font-weight: 700;
+      font-size: 22px;
       line-height: 30px;
-      letter-spacing: 0em;
       text-align: left;
     }
 
     .header-paragraph {
-      font-size: 16px;
-      font-weight: 400;
-      line-height: 20px;
+      font-size: 14px;
       letter-spacing: 0em;
       text-align: left;
       margin-top: 1rem;
@@ -96,6 +93,7 @@ export const BannerStyled = styled.div`
 
     .img-banner {
       width: 90%;
+      height: 100%;
     }
 
     .btn-header-2 {
@@ -106,7 +104,7 @@ export const BannerStyled = styled.div`
     }
 
     .btn-comece-header {
-      margin-bottom: 2rem;
+      display: none;
     }
 
     .btn-conheca-header {
@@ -129,7 +127,7 @@ export const BannerStyled = styled.div`
     }
 
     .header-text {
-      width: 50%;
+      width: 100%;
       height: auto;
       margin-bottom: 2rem;
       display: flex;
@@ -137,7 +135,7 @@ export const BannerStyled = styled.div`
 
     .header-image {
       width: 50%;
-      height: auto;
+      height: 100%;
       display: flex;
       justify-content: flex-end;
     }

@@ -107,11 +107,8 @@ export const HistoriaG3Styled = styled.div`
   }
 
   .history-title {
-    color: #f9b32a;
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
+    font-size: 22px;
+    width: 100%;
   }
 
   .acronym {

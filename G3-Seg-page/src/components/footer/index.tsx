@@ -1,5 +1,6 @@
 import Logo from "../../assets/img/logo.svg";
 import { FooterStyled } from "./styled";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 
 function FooterArea() {
   return (
@@ -7,22 +8,21 @@ function FooterArea() {
       <footer>
         <ul className="footer">
           <li>
-            <img className="logo-footer" src={Logo} />
+            <AnchorLink href="#header" className="logo-footer">
+              <img src={Logo} />
+            </AnchorLink>
           </li>
           <li>
-            <a href="#" className="footer-contact">
+            <AnchorLink href="formulario" className="footer-contact">
               contato@g3seguranca.com.br
-            
-            <br />
-
+              <br />
               (34) 9 9223-4389
-            </a>
+            </AnchorLink>
           </li>
 
           <li>
             <h6 className="frase-1">2023 - Todos os direitos reservados</h6>
           </li>
-
         </ul>
       </footer>
     </FooterStyled>

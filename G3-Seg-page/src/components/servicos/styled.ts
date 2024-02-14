@@ -76,29 +76,22 @@ export const ServicosStyled = styled.div`
       flex-direction: column;
       flex-wrap: wrap;
       margin-top: 2rem;
+      margin-bottom: 1rem;
     }
 
     .h2-servicos {
-      color: #f9b32a;
-      font-size: 36px;
-      font-style: normal;
-      font-weight: 700;
-      line-height: normal;
+      font-size: 22px;
       width: 100%;
     }
 
     .p-servicos {
-      color: #f9b32a;
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: normal;
+      font-size: 14px;
       margin-top: 1rem;
       width: 100%;
     }
 
     .btn-servicos {
-      margin-top: 1rem;
+      margin-top: 2rem;
     }
   }
 

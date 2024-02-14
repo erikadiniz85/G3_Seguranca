@@ -72,6 +72,8 @@ export const SegmentacaoStyles = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
   }
 
   .segmentacao-div-2 {
@@ -79,6 +81,9 @@ export const SegmentacaoStyles = styled.div`
     height: auto;
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: flex-start;
   }
 
   .segmentacao-title {
